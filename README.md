@@ -34,7 +34,7 @@
 ##### 備考：
 - 基本情報は別のテーブルで記載
 
-## user_infomationテーブル
+## user_informationテーブル
 |Column|Type|Options|
 |------|----|-------|
 |family_name_kanji|text|null: false  |
@@ -78,7 +78,7 @@ belongs_to :user
 ### Association
 - belongs_to :user
 
-## payment_infomationテーブル
+## payment_informationテーブル
 |Column|Type|Options|
 |------|----|-------|
 |due_year|integer|null: false  |
