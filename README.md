@@ -16,47 +16,47 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|mail_address|text|null: false  unique: true|
-|password|text|null: false|
-|nickname|text|null: false  add_index:true|
+|mail_address|string|null: false  unique: true|
+|password|string|null: false|
+|nickname|string|null: false  add_index:true|
 ### Association
-- has_many :transactions,throgh: :buyers
+- has_many :transactions,through: :buyers
 - has_many :buyers
-- has_many :transactions,throgh: :sellers
+- has_many :transactions,through: :sellers
 - has_many :sellers
 - has_many :todolists
 - has_many :payment_infomations
-- has_many :products,throgh: :likes
+- has_many :products,through: :likes
 - has_many :likes
-- has_many :newsfeeds,throgh: :user_notifications
+- has_many :newsfeeds,through: :user_notifications
 - has_many :user_notifications
 
 ##### 備考：
 - 基本情報は別のテーブルで記載
 
-## user_informationテーブル
+## user_informationsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|family_name_kanji|text|null: false  |
-|first_name_kanji|text|null: false  |
-|family_name_kana|text|null: false  |
-|first_name_kana|text|null: false  |
+|family_name_kanji|string|null: false  |
+|first_name_kanji|string|null: false  |
+|family_name_kana|string|null: false  |
+|first_name_kana|string|null: false  |
 |profile|text|null: false  |
 |birth_year|integer|null: false  |
 |birth_month|integer|null: false  |
 |birth_day|integer|null: false  |
-|postal_code|integer|null: false  |
-|address_prefecture|text|null: false  |
-|address_city|text|null: false  |
-|address_street|text|null: false  |
-|address_building|text|null: false  |
-|mobile_number|integer|null: false  |
+|postal_code|string|null: false  |
+|address_prefecture|string|null: false  |
+|address_city|string|null: false  |
+|address_street|string|null: false  |
+|address_building|string|null: false  |
+|mobile_number|string|null: false  |
 |user_id|integer|foreign_key: true|
 
 ### Association
 belongs_to :user
 
-## point_amountテーブル
+## point_amountsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |amount|integer|null: false  |
@@ -67,29 +67,29 @@ belongs_to :user
 - belongs_to :user
 
 
-## todolistテーブル
+## todolistsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|todo_title|text|null: false|
-|todo_body|text|null: false|
-|todo_due|date|null: false|
+|title|string|null: false|
+|body|text|null: false|
+|due|date|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
 
-## payment_informationテーブル
+## payment_informationsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |due_year|integer|null: false  |
 |due_month|integer|null: false  |
-|security_code|integer|null: false  |
+|security_code|string|null: false  |
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
 
-## buyerテーブル
+## buyersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -102,7 +102,7 @@ belongs_to :user
 - userとtransactionテーブルの中間テーブル。多対多の関係が存在する前提
 
 
-## sellerテーブル
+## sellersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -112,7 +112,7 @@ belongs_to :user
 - belongs_to :user
 
 
-## transactionテーブル
+## transactionsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |transaction_status|integer|null: false  |
@@ -123,9 +123,9 @@ belongs_to :user
 
 ### Association
 - belongs_to :product
-- has_many :users,throgh: :buyers
+- has_many :users,through: :buyers
 - has_many :buyers
-- has_many :users,throgh: :sellers
+- has_many :users,through: :sellers
 - has_many :sellers
 - has_many :review_id
 
@@ -133,7 +133,7 @@ belongs_to :user
 - trasactionテーブルは２つの中間テーブル（buyer,seller）を経由してuserテーブルと多対多の関係性が存在
 
 
-## reviewテーブル
+## reviewsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |review|text|null: false  |
@@ -142,7 +142,7 @@ belongs_to :user
 - transactioonテーブルで評価者、被評家者の管理をする
 
 
-## user_notificationテーブル
+## user_notificationsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -154,13 +154,13 @@ belongs_to :user
 ##### 備考：
 - user_newsfeedの中間テーブルとしている
 
-## newsfeedテーブル
+## newsfeedsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|news_title|text|null: false  |
-|news_body|text|null: false  |
+|title|string|null: false  |
+|body|text|null: false  |
 |sent_at|integer|timestamp  |
-|personal_message|boolean|default: false, null: false|
+|personal_flag|boolean|default: false, null: false|
 
 ### Association
 - has_many :users through::users_notifications
@@ -170,7 +170,7 @@ belongs_to :user
 - personal_messageはフラグとして使用する。デフォルト設定を追加した。
 
 
-## likeテーブル
+## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
@@ -183,28 +183,28 @@ belongs_to :user
 - user_productの中間テーブルとしている
 
 
-## productテーブル
+## productsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|product_name|text|null: false  |
-|product_description|text|null: false  |
+|name|string|null: false  |
+|description|text|null: false  |
 |top_category_id|integer|null: false, foreign_key: true|
 |mid_category_id|integer|null: false, foreign_key: true|
 |low_category_id|integer|null: false, foreign_key: true|
 |condition_id|integer|null: false, foreign_key: true|
 |delivery_fee_id|integer|null: false, foreign_key: true|
 |packing_day_id|integer|null: false, foreign_key: true|
-|product_price|integer|null: false|
-|size|text|null: false|
+|price|integer|null: false|
+|size|string|null: false|
 |prefecture_id|integer|null: false, foreign_key: true|
 |brand_id|integer|foreign_key: true|
 
 
 ### Association
-- has_many :users,throgh: :likes
+- has_many :users,through: :likes
 - has_many :likes
 - has_many :product_images
-- has_many :images,throgh: :product_images
+- has_many :images,through: :product_images
 - has_many :transactions
 
 ##### 備考：
@@ -212,10 +212,10 @@ belongs_to :user
 - 現状、productテーブルはbuyer/seller-Userでつないでいる。
 
 
-## brandテーブル
+## brandsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false  add_index: true|
+|name|string|null: false  add_index: true|
 |top_category_id|integer|foreign_key: true|
 ### Association
 - belongs_to :top_category
@@ -224,18 +224,18 @@ belongs_to :user
 ##### 備考：
 - ブランド名で検索するのでインデックスを追加
 
-## top_categoryテーブル
+## top_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|top_category_name|text|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :mid_categories
 
-## mid_categoryテーブル
+## mid_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|mid_category_name|text|null: false|
+|name|string|null: false|
 |top_category_id|integer|null: false  foreign_key: true|
 ### Association
 - belongs_to :top_category
@@ -245,10 +245,10 @@ belongs_to :user
 ##### 備考：
 - top_categoryは親、low_categoryは子関係がある。
 
-## low_categoryテーブル
+## low_categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|low_category_name|text|null: false  |
+|name|text|null: false  |
 |mid_category_id|integer|null: false  foreign_key: true|
 ### Association
 - belongs_to :mid_category
@@ -258,18 +258,18 @@ belongs_to :user
 - mid_categoryは親テーブルがある。
 
 
-## conditionテーブル
+## conditionsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|condition_description|text|null: false |
+|description|text|null: false |
 
-## delivery_feeテーブル
+## delivery_feesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|payment|text|null: false |
+|payment|string|null: false |
 
 
-## product_imageテーブル
+## product_imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image_id|integer|null: false, foreign_key: true|
@@ -283,28 +283,28 @@ belongs_to :user
 - productは最大１０枚の写真を投稿できるため、中間テーブルを作成。
 
 
-## imageテーブル
+## imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image_file_name|text|null: false|
+|image_file_name|string|null: false|
 ### Association
-- has_many :products,throgh: :product_images
+- has_many :products,through: :product_images
 - has_many :product_images
 
 ##### 備考：
 - product_imagesを中間テーブルとしている
+- imageのファイル名はstringが一般的とのこと
 
-
-## packing_dayテーブル
+## packing_daysテーブル
 |Column|Type|Options|
 |------|----|-------|
-|paking_day|text|null: false|
+|paking_day|string|null: false|
 
 
-## prefectureテーブル
+## prefecturesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|prefecture_name|text|null: false  |
+|name|string|null: false  |
 |regional_area_id|integer|null: false, foreign_key: true|
 
 ### Association
@@ -312,9 +312,9 @@ belongs_to :user
 - has_many :products
 
 
-## regional_areaテーブル
+## regional_areasテーブル
 |Column|Type|Options|
 |------|----|-------|
-|regional_area_name|text|null: false  |
+|name|string|null: false  |
 ### Association
 - has_many :prefectures
