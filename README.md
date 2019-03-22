@@ -16,7 +16,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|mail_address|string|null: false  unique: true|
+|email_address|string|null: false  unique: true|
 |password|string|null: false|
 |nickname|string|null: false  add_index:true|
 ### Association
@@ -25,7 +25,7 @@
 - has_many :transactions,through: :sellers
 - has_many :sellers
 - has_many :todolists
-- has_many :payment_infomations
+- has_many :payment_methods
 - has_many :products,through: :likes
 - has_many :likes
 - has_many :newsfeeds,through: :user_notifications
@@ -34,7 +34,7 @@
 ##### 備考：
 - 基本情報は別のテーブルで記載
 
-## user_informationsテーブル
+## user_detailsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |family_name_kanji|string|null: false  |
@@ -56,7 +56,7 @@
 ### Association
 belongs_to :user
 
-## point_amountsテーブル
+## pointsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |amount|integer|null: false  |
@@ -78,7 +78,7 @@ belongs_to :user
 ### Association
 - belongs_to :user
 
-## payment_informationsテーブル
+## payment_methodsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |due_year|integer|null: false  |
@@ -130,7 +130,7 @@ belongs_to :user
 - has_many :review_id
 
 ##### 備考：
-- trasactionテーブルは２つの中間テーブル（buyer,seller）を経由してuserテーブルと多対多の関係性が存在
+- transactionテーブルは２つの中間テーブル（buyer,seller）を経由してuserテーブルと多対多の関係性が存在
 
 
 ## reviewsテーブル
@@ -139,7 +139,7 @@ belongs_to :user
 |review|text|null: false  |
 
 ##### 備考：
-- transactioonテーブルで評価者、被評家者の管理をする
+- transactionテーブルで評価者、被評価者の管理をする
 
 
 ## user_notificationsテーブル
@@ -152,7 +152,10 @@ belongs_to :user
 - belongs_to :user
 
 ##### 備考：
-- user_newsfeedの中間テーブルとしている
+- usersテーブルとnewsfeedsテーブルの中間テーブルとしている
+- newsfeedsは複数の（送信先となる）userを持つ。（１つのお知らせは送信先の複数のuserとつながっている）
+- userは複数のお知らせを持つ。（userは複数のお知らせとつながっている）
+- 上記の関係性からusersテーブルとnewsfeedsテーブルには多対多の関係が成り立つ。そのためにuser_notificationsを中間テーブルとしている
 
 ## newsfeedsテーブル
 |Column|Type|Options|
@@ -167,7 +170,7 @@ belongs_to :user
 - has_many :users_notifications
 
 ##### 備考：
-- personal_messageはフラグとして使用する。デフォルト設定を追加した。
+- personal_flagは個別メッセージのフラグとして使用する。デフォルト設定を追加した。
 
 
 ## likesテーブル
@@ -180,7 +183,10 @@ belongs_to :user
 - belongs_to :user
 
 ##### 備考：
-- user_productの中間テーブルとしている
+- いいね！機能実装ために作成。
+- userは複数のいいねを持つ。（いいねをした複数の商品とつながっている）
+- producは複数のいいねを持つ。（いいねを押した複数のユーザーとつながっている）
+- 上記の関係性からuserとproductには多対多の関係が成り立つ。そのためにlikesを中間テーブルとしている
 
 
 ## productsテーブル
@@ -298,7 +304,7 @@ belongs_to :user
 ## packing_daysテーブル
 |Column|Type|Options|
 |------|----|-------|
-|paking_day|string|null: false|
+|packing_day|string|null: false|
 
 
 ## prefecturesテーブル
