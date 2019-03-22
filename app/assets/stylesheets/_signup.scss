@@ -1,0 +1,120 @@
+.btn-default{
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+.btn-mail{
+  position: relative;
+  color: black;
+  background: $whiteSmoke;
+  height: 48px;
+  .icon-mail{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+    color: $veryLightGrey;
+    font-size: 18px;
+  }
+}
+.btn-sns{
+  position: relative;
+}
+.btn-sns-facebook{
+  margin: 16px 0 0;
+  background: $toryBlue;
+  color: $white;
+  .icon-facebook{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+  }
+}
+.btn-sns-google{
+  margin: 16px 0 0;
+  color: $nightRider;
+  border: $borderBlack solid 1px;
+  background: $white url("google_logo.jpeg") no-repeat;
+  background-position: 12px 50%;
+}
+.single-container{
+  padding: 0 0 220px;
+  background-color: $darkwhite;
+  .single-header{
+    height: 128px;
+    text-align: center;
+    h1{
+      display: inline-block;
+      margin:40px 0 0;
+      a{
+        width: 185px;
+        height: 49px;
+        line-height: 49px;
+      }
+    }
+  }
+  .single-main{
+    display: block;
+    .l-single-container{
+      width: 700px;
+      margin: 0 auto;
+      background-color: $white;
+      .l-single-head{
+        padding: 32px 16px;
+        font-size: 22px;
+        line-height: 1.5;
+        text-align: center;
+      }
+      .l-single-inner{
+        margin: 0;
+        border-style: solid;
+        border-width: 0;
+        padding: 64px;
+        .l-single-content{
+          max-width: 320px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .sigle-footer{
+    width: 456px;
+    height: 220px;
+    margin: 0 auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 250px;
+    padding: 40px 0;
+    text-align: center;
+    nav{
+      display: block;
+      li{
+        display: inline-block;
+        font-size: 12px;
+        padding: 0 0 0 12px;
+      }
+    }
+    .single-footer-logo{
+      width: 80px;
+      height: 65px;
+      margin: 40px auto 0;
+      img{
+        vertical-align: middle;
+      }
+    }
+    p{
+      margin: 8px 0 0;
+      small{
+        font-size: 13px;
+      }
+    }
+  }
+}
