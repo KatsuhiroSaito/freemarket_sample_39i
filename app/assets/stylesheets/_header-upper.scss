@@ -1,6 +1,7 @@
 @import "./color";
 
 .header-upper {
+  @include clearfix;
   &__left {
     float: left;
   }
