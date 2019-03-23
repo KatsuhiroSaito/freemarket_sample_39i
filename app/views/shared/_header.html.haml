@@ -5,7 +5,7 @@
         = link_to root_path, class: "header-upper__left-link" do
           = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3112359103", size: "134x36", alt: "mercari"
       %form.header-upper__right{action: '/'}
-        %input.header-upper__right-input{type: "search", name: "keyword", placeholder: "キーワードから探す"}
+        %input.header-upper__search{type: "search", name: "keyword", placeholder: "キーワードから探す"}
     .header-lower.clearfix
       %nav.header-lower__left
         %ul.header-search
