@@ -3,7 +3,6 @@
 .header-notification {
   position: relative;
   display: inline-block;
-  padding: 0 0 0 16px;
   vertical-align: middle;
   &__link {
     display: block;
@@ -15,5 +14,8 @@
   }
   &__title {
     margin: 0 0 0 8px;
+  }
+  &__icon {
+    font-size: 17px;
   }
 }
