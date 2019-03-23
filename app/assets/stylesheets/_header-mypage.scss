@@ -1,0 +1,30 @@
+.header-mypage {
+  &__link {
+    margin: 0;
+    display: block;
+    font-size: 14px;
+    color: $nightRider;
+    position: relative;
+    height: 38px;
+    line-height: 32px;
+  }
+  &__figure {
+    line-height: 0;
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+  &__icon {
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  &__title {
+    display: inline-block;
+    margin: 0 0 0 8px;
+    font-size: 14px;
+    vertical-align: middle;
+  }
+}
