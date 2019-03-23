@@ -19,10 +19,12 @@
                 ブランドから探す
       .header-lower__right
         %ul.header-nav
-          %li.header-nav__list
-            %h2.header-nav__title
-              = link_to root_path, class: "sp-header-user-icon" do
-                %div マイページ
+          %li.header-nav__list.header-nav__list--first
+            = link_to root_path, class: "header-nav__mypage-link" do
+              %figure
+                %div
+                  = image_tag "//static.mercdn.net/thumb/members/150864990.jpg?1471007375#", size: "32"
+              %div マイページ
           %li.header-nav__list
             = link_to root_path, class: "pc-header-nav-root" do
               %span お知らせ
