@@ -30,6 +30,7 @@
 - has_many :likes
 - has_many :newsfeeds,through: :user_notifications
 - has_many :user_notifications
+- has_one :user_detail
 
 ##### 備考：
 - 基本情報は別のテーブルで記載
