@@ -1,6 +1,7 @@
 @import "./color";
 
 .header-lower {
+  @include clearfix;
   margin: 8px 0 0;
   &__left {
     float: left;
