@@ -1,4 +1,5 @@
 @import "./color";
+@import "clearfix";
 
 .header-upper {
   @include clearfix;
@@ -9,6 +10,7 @@
     float: right;
     position: relative;
     width: calc(100% - (134px + 16px));
+  }
   &__search {
     width: 100%;
     height: 36px;
@@ -18,6 +20,5 @@
     border: 1px solid $veryLightGrey;
     line-height: 1.5;
     font-size: 16px;
-    }
   }
 }
