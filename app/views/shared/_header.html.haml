@@ -27,8 +27,9 @@
                     = image_tag "//static.mercdn.net/thumb/members/150864990.jpg?1471007375#", size: "32"
                 %div.header-mypage__title マイページ
           %li.header-nav__list
-            = link_to root_path, class: "pc-header-nav-root" do
-              %span お知らせ
+            .header-notification
+              = link_to root_path, class: "header-notification__link" do
+                %span.header-notification__title お知らせ
           %li.header-nav__list
             = link_to root_path, class: "pc-header-nav-root" do
               %span やることリスト
