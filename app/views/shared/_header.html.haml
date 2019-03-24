@@ -6,7 +6,7 @@
           = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3112359103", size: "134x36", alt: "mercari"
       %form.header-upper__right{action: '/'}
         %input.header-upper__search{type: "search", name: "keyword", placeholder: "キーワードから探す"}
-        %i.fa.fa-search.header-upper__icon
+        = icon('fas', 'search', class: 'header-upper__icon')
     .header-lower
       %nav.header-lower__left
         %ul.header-find
@@ -30,10 +30,12 @@
           %li.header-nav__list
             .header-notification
               = link_to root_path, class: "header-notification__link" do
-                %i.fa.fa-bell.header-notification__icon
+                -# %i.far.fa-bell.header-notification__icon
+                = icon('far', 'bell', class: 'header-notification__icon')
                 %span.header-notification__title お知らせ
           %li.header-nav__list
             .header-todos
               = link_to root_path, class: "header-todos__link" do
-                %i.fa.fa-check.header-todos__icon
+                -# %i.fa.fa-check.header-todos__icon
+                = icon('fas', 'check', class: 'header-todos__icon')
                 %span.header-todos__title やることリスト
