@@ -1,5 +1,5 @@
 class SamplesController < ApplicationController
   def sample
-    render 'signup'
+    render 'login'
   end
 end
