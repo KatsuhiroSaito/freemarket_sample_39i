@@ -30,12 +30,10 @@
           %li.header-nav__list
             .header-notification
               = link_to root_path, class: "header-notification__link" do
-                -# %i.far.fa-bell.header-notification__icon
                 = icon('far', 'bell', class: 'header-notification__icon')
                 %span.header-notification__title お知らせ
           %li.header-nav__list
             .header-todos
               = link_to root_path, class: "header-todos__link" do
-                -# %i.fa.fa-check.header-todos__icon
                 = icon('fas', 'check', class: 'header-todos__icon')
                 %span.header-todos__title やることリスト
