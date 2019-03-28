@@ -2,16 +2,8 @@
 @import "mixin";
 
 .header-notification {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
   &__link {
-    display: block;
-    font-size: 14px;
-    color: $nightRider;
-    position: relative;
-    height: 38px;
-    line-height: 32px;
+    @include header_link
   }
   &__title {
     margin: 0 0 0 8px;

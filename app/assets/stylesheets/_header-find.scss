@@ -12,14 +12,9 @@
     }
   }
   &__title {
-    font-size: 14px;
     font-weight: 400;
   }
   &__root {
-    display: block;
-    color: $nightRider;
-    position: relative;
-    height: 38px;
-    line-height: 32px;
+    @include header_link
   }
 }
