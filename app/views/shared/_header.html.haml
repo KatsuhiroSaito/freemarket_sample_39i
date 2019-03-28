@@ -21,19 +21,19 @@
       .header-lower__right
         %ul.header-nav
           %li.header-nav__list.header-nav__list--first
-            .header-mypage
-              = link_to root_path, class: "header-mypage__link" do
-                %figure.header-mypage__figure
-                  %div.header-mypage__icon
-                    = image_tag "//static.mercdn.net/thumb/members/150864990.jpg?1471007375#", size: "32"
-                %div.header-mypage__title マイページ
+            .header-todos
+              = link_to root_path, class: "header-todos__link" do
+                = icon('fas', 'check', class: 'header-todos__icon')
+                %span.header-todos__title やることリスト
           %li.header-nav__list
             .header-notification
               = link_to root_path, class: "header-notification__link" do
                 = icon('far', 'bell', class: 'header-notification__icon')
                 %span.header-notification__title お知らせ
           %li.header-nav__list
-            .header-todos
-              = link_to root_path, class: "header-todos__link" do
-                = icon('fas', 'check', class: 'header-todos__icon')
-                %span.header-todos__title やることリスト
+            .header-mypage
+              = link_to root_path, class: "header-mypage__link" do
+                %figure.header-mypage__figure
+                  %div.header-mypage__icon
+                    = image_tag "//static.mercdn.net/thumb/members/150864990.jpg?1471007375#", size: "32"
+                %div.header-mypage__title マイページ
