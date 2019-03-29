@@ -11,3 +11,19 @@
     color: $pacificBlue;
   }
 }
+
+@mixin header-find-box_link($background-color, $line-height, $color) {
+  color: $nightRider;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: $line-height;
+  padding: 0 16px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  &:hover {
+    background-color: $background-color;
+    color: $color;
+  }
+}
