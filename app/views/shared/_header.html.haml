@@ -10,69 +10,253 @@
     .header-lower
       %nav.header-lower__left
         %ul.header-find
-          %li.header-find__list.header-find__list--first
+          %li.header-find__list.header-find__list--category
             %h2.header-find__title
               = link_to root_path, class: "header-find__root" do
-                カテゴリーから探す
-            %ul.header-find-box
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+                = icon('fas', 'list-ul', class: 'header-find__icon')
+                %span カテゴリーから探す
+            %ul.header-find-box-parent
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   レディース
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+                %ul.header-find-box-child
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      トップス
+                    %ul.header-find-box-grandchild
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          Tシャツ/カットソー（半袖/袖なし）
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          Tシャツ/カットソー（七分/長袖）
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          シャツ/ブラウス(半袖/袖なし)
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          シャツ/ブラウス（七分/長袖）
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          ポロシャツ
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          キャミソール
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          タンクトップ
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          ホルターネック
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          ニット/セーター
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          チュニック
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          カーディガン/ポレロ
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          アンサンブル
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          ベスト/ジレ
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          パーカー
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      ジャケット/アウター
+                    %ul.header-find-box-grandchild
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                      %li.header-find-box-grandchild__list
+                        = link_to root_path, class: "header-find-box-grandchild__link" do
+                          小カテゴリー
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      パンツ
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      スカート
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      ワンピース
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      靴
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      ルームウェア/パジャマ
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      レッグウェア
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      帽子
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      バッグ
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      アクセサリー
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      ヘアアクセサリー
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      小物
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      時計
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   メンズ
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+                %ul.header-find-box-child
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      トップス
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      ジャケット/アウター
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      パンツ
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      靴
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      バッグ
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      スーツ
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      帽子
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      アクセサリー
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      小物
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      時計
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      水着
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      レッグウェア
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      アンダーウェア
+                  %li.header-find-box-child__list
+                    = link_to root_path, class: "header-find-box-child__link" do
+                      その他
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   ベビー・キッズ
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   インテリア・住まい・小物
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   本・音楽・ゲーム
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   おもちゃ・ホビー・グッズ
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   コスメ・香水・美容
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   家電・スマホ・カメラ
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   スポーツ・レジャー
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   ハンドメイド
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   チケット
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   自転車・オートバイ
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   その他
-              %li.header-find-box__parent
-                = link_to root_path, class: "header-find-box__link" do
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
                   カテゴリー一覧
           %li.header-find__list
             %h2.header-find__title
               = link_to root_path, class: "header-find__root" do
-                ブランドから探す
+                = icon('fas', 'tag', class: 'header-find__icon')
+                %span ブランドから探す
+            %ul.header-find-box-parent
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
+                  シャネル
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
+                  ナイキ
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
+                  ルイ ヴィトン
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
+                  シュプリーム
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
+                  アディダス
+              %li.header-find-box-parent__list
+                = link_to root_path, class: "header-find-box-parent__link" do
+                  ブランド一覧
       .header-lower__right
         %ul.header-nav
           %li.header-nav__list.header-nav__list--first
-            .header-todos
-              = link_to root_path, class: "header-todos__link" do
-                = icon('fas', 'check', class: 'header-todos__icon')
-                %span.header-todos__title やることリスト
-          %li.header-nav__list
             .header-notification
               = link_to root_path, class: "header-notification__link" do
                 = icon('far', 'bell', class: 'header-notification__icon')
                 %span.header-notification__title お知らせ
+          %li.header-nav__list
+            .header-todos
+              = link_to root_path, class: "header-todos__link" do
+                = icon('fas', 'check', class: 'header-todos__icon')
+                %span.header-todos__title やることリスト
           %li.header-nav__list
             .header-mypage
               = link_to root_path, class: "header-mypage__link" do
