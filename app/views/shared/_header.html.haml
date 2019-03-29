@@ -257,6 +257,17 @@
               = link_to root_path, class: "header-todos__link" do
                 = icon('fas', 'check', class: 'header-todos__icon')
                 %span.header-todos__title やることリスト
+              %ul.header-todos-box
+                %li.header-todos-box__list
+                  = link_to root_path, class: "header-todos-box__link" do
+                    %figure.header-todos-box__figure
+                      = image_tag "//static.mercdn.net/images/mercari_profile.png"
+                    .header-todos-box__body
+                      .header-todos-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
+                      .header-todos-box__time
+                        = icon('far', 'clock', class: 'header-todos-box__icon--clock')
+                        %span 8時間前
+                  = icon('fas', 'chevron-right', class: 'header-todos-box__icon--arrow')
           %li.header-nav__list
             .header-mypage
               = link_to root_path, class: "header-mypage__link" do
