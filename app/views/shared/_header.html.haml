@@ -252,22 +252,22 @@
               = link_to root_path, class: "header-notification__link" do
                 = icon('far', 'bell', class: 'header-notification__icon')
                 %span.header-notification__title お知らせ
+              %ul.header-notification-box
+                %li.header-notification-box__list
+                  = link_to root_path, class: "header-notification-box__link" do
+                    %figure.header-notification-box__figure
+                      = image_tag "//static.mercdn.net/images/mercari_profile.png", class: "header-notification-box__image"
+                    .header-notification-box__body
+                      .header-notification-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
+                      .header-notification-box__time
+                        = icon('far', 'clock', class: 'header-notification-box__icon--clock')
+                        %span 8時間前
+                  = icon('fas', 'chevron-right', class: 'header-notification-box__icon--arrow')
           %li.header-nav__list
             .header-todos
               = link_to root_path, class: "header-todos__link" do
                 = icon('fas', 'check', class: 'header-todos__icon')
                 %span.header-todos__title やることリスト
-              %ul.header-todos-box
-                %li.header-todos-box__list
-                  = link_to root_path, class: "header-todos-box__link" do
-                    %figure.header-todos-box__figure
-                      = image_tag "//static.mercdn.net/images/mercari_profile.png"
-                    .header-todos-box__body
-                      .header-todos-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
-                      .header-todos-box__time
-                        = icon('far', 'clock', class: 'header-todos-box__icon--clock')
-                        %span 8時間前
-                  = icon('fas', 'chevron-right', class: 'header-todos-box__icon--arrow')
           %li.header-nav__list
             .header-mypage
               = link_to root_path, class: "header-mypage__link" do
