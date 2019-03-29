@@ -6,15 +6,20 @@
   &__list {
     position: relative;
     display: inline-block;
-    padding: 0 0 0 16px;
-    &--first {
-      padding: 0;
+    padding: 0 0 0 22px;
+    &--category {
+      padding: 0 0 0 2px;
     }
   }
   &__title {
-    font-weight: 400;
+    font-weight: bold;
   }
   &__root {
     @include header_link
+  }
+  &__icon {
+    color: $cinnabar;
+    margin-right: 4px;
+    font-size: 14px;
   }
 }
