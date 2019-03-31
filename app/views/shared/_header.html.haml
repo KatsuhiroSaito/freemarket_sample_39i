@@ -320,9 +320,10 @@
               .header-mypage-box
                 .header-mypage-box__state
                   .header-mypage-box__figure
-                    .header-mypage-box__user-icon
+                    %figure.header-mypage-box__user-icon
                       = image_tag "//static.mercdn.net/thumb/members/150864990.jpg?1471007375#", width: "60"
-                      %figcaption.header-mypage-box__user-icon__figcaption Katsuhiro Saito
+                      %figcaption.header-mypage-box__user-icon__figcaption
+                        Katsuhiro Saito
                   %ul.header-mypage-box__user-information-listing
                     %li.header-mypage-box__review
                       = link_to root_path, class: "header-mypage-box__review__link" do
@@ -333,15 +334,45 @@
                   %ul.header-mypage-box__sales-point
                     %li.header-mypage-box__sales
                       = link_to root_path, class: "header-mypage-box__sales__link" do
-                        .header-mypage-box__sales-left 売上金
+                        .header-mypage-box__sales-left
+                          売上金
                         .header-mypage-box__sales-right
                           ¥ 0
                           = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
                     %li.header-mypage-box__point
                       = link_to root_path, class: "header-mypage-box__point__link" do
-                        .header-mypage-box__point-left ポイント
+                        .header-mypage-box__point-left
+                          ポイント
                         .header-mypage-box__point-right
                           P 0
                           = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
+                %ul.header-mypage-box__nav-listing
+                  %li.header-mypage-box__nav-list
+                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                      いいね!一覧
+                      = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
+                  %li.header-mypage-box__nav-list
+                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                      出品した商品 - 出品中
+                      = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
+                  %li.header-mypage-box__nav-list
+                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                      出品した商品 - 取引中
+                      = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
+                  %li.header-mypage-box__nav-list
+                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                      出品した商品 - 売却済み
+                      = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
+                  %li.header-mypage-box__nav-list
+                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                      購入した商品 - 取引中
+                      = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
+                  %li.header-mypage-box__nav-list
+                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                      購入した商品 - 過去の取引
+                      = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
+
+
+
 
 
