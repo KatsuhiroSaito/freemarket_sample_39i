@@ -203,7 +203,6 @@ belongs_to :user
 |packing_day_id|integer|null: false, foreign_key: true|
 |price|integer|null: false|
 |size|string|null: false|
-|prefecture_id|integer|null: false, foreign_key: true|
 |brand_id|integer|foreign_key: true|
 
 
@@ -307,21 +306,4 @@ belongs_to :user
 |------|----|-------|
 |packing_day|string|null: false|
 
-
 ## prefecturesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false  |
-|regional_area_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :regional_areas
-- has_many :products
-
-
-## regional_areasテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false  |
-### Association
-- has_many :prefectures
