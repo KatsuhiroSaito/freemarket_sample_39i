@@ -306,4 +306,3 @@ belongs_to :user
 |------|----|-------|
 |packing_day|string|null: false|
 
-## prefecturesテーブル
