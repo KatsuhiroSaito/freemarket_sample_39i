@@ -263,11 +263,54 @@
                         = icon('far', 'clock', class: 'header-notification-box__icon--clock')
                         %span 8時間前
                   = icon('fas', 'chevron-right', class: 'header-notification-box__icon--arrow')
-          %li.header-nav__list
+                %li.header-notification-box__list
+                  = link_to root_path, class: "header-notification-box__link" do
+                    %figure.header-notification-box__figure
+                      = image_tag "//static.mercdn.net/images/mercari_profile.png", class: "header-notification-box__image"
+                    .header-notification-box__body
+                      .header-notification-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
+                      .header-notification-box__time
+                        = icon('far', 'clock', class: 'header-notification-box__icon--clock')
+                        %span 8時間前
+                  = icon('fas', 'chevron-right', class: 'header-notification-box__icon--arrow')
+                %li.header-notification-box__list
+                  = link_to root_path, class: "header-notification-box__link" do
+                    %figure.header-notification-box__figure
+                      = image_tag "//static.mercdn.net/images/mercari_profile.png", class: "header-notification-box__image"
+                    .header-notification-box__body
+                      .header-notification-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
+                      .header-notification-box__time
+                        = icon('far', 'clock', class: 'header-notification-box__icon--clock')
+                        %span 8時間前
+                  = icon('fas', 'chevron-right', class: 'header-notification-box__icon--arrow')
+                %li.header-notification-box__list
+                  = link_to root_path, class: "header-notification-box__link" do
+                    %figure.header-notification-box__figure
+                      = image_tag "//static.mercdn.net/images/mercari_profile.png", class: "header-notification-box__image"
+                    .header-notification-box__body
+                      .header-notification-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
+                      .header-notification-box__time
+                        = icon('far', 'clock', class: 'header-notification-box__icon--clock')
+                        %span 8時間前
+                  = icon('fas', 'chevron-right', class: 'header-notification-box__icon--arrow')
+                %li.header-notification-box__list
+                  = link_to root_path, class: "header-notification-box__link" do
+                    %figure.header-notification-box__figure
+                      = image_tag "//static.mercdn.net/images/mercari_profile.png", class: "header-notification-box__image"
+                    .header-notification-box__body
+                      .header-notification-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
+                      .header-notification-box__time
+                        = icon('far', 'clock', class: 'header-notification-box__icon--clock')
+                        %span 8時間前
+                  = icon('fas', 'chevron-right', class: 'header-notification-box__icon--arrow')
+          %li.header-nav__list.header-nav__list--second
             .header-todos
               = link_to root_path, class: "header-todos__link" do
                 = icon('fas', 'check', class: 'header-todos__icon')
                 %span.header-todos__title やることリスト
+              %ul.header-todos-box
+                %li.header-todos-box__list.header-todos-box__list--not-found
+                現在、やることリストはありません
           %li.header-nav__list
             .header-mypage
               = link_to root_path, class: "header-mypage__link" do
