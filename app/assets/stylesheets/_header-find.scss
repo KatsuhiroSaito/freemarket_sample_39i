@@ -9,6 +9,14 @@
     padding: 0 0 0 22px;
     &--category {
       padding: 0 0 0 2px;
+      &:hover .header-find-box-parent {
+        display: block;
+      }
+    }
+    &--brand {
+      &:hover .header-find-box-parent {
+        display: block;
+      }
     }
   }
   &__title {

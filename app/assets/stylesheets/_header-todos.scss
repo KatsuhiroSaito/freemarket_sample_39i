@@ -2,6 +2,12 @@
 @import "mixin";
 
 .header-todos {
+  &:hover .header-todos-box {
+    display: block;
+  }
+  &:hover .header-todos__icon {
+    color: $pacificBlue;
+  }
   &__link {
     @include header_link;
   }

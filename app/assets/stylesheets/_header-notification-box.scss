@@ -2,9 +2,9 @@
 @import "mixin";
 
 .header-notification-box {
-  // display: none;
+  display: none;
   position: absolute;
-  top: 42px;
+  top: 38px;
   left: 0;
   z-index: 1;
   width: 320px;
@@ -22,6 +22,10 @@
     min-height: 80px;
     padding: 16px;
     color: $nightRider;
+    &:hover {
+      background-color: $darkwhite;
+      opacity: 1;
+    }
   }
   &__figure {
     position: relative;

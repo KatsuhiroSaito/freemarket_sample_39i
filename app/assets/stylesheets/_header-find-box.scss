@@ -14,6 +14,9 @@
     display: none;
     &__list {
       width: 224px;
+      &:hover .header-find-box-child {
+        display: block;
+      }
     }
     &__link {
       @include header-find-box_link($cinnabar, 44px, $white);
@@ -30,6 +33,9 @@
     display: none;
     &__list {
       width: 224px;
+      &:hover ul.header-find-box-grandchild {
+        display: block;
+      }
     }
     &__link {
       @include header-find-box_link($whiteSmoke, 14px, $nightRider);
@@ -53,4 +59,14 @@
       padding: 8px 16px;
     }
   }
+}
+
+.active-parent>a{
+  background-color: $cinnabar;
+  color: $white;
+}
+
+.active-child>a{
+  background-color: $whiteSmoke;
+  color: $nightRider;
 }
