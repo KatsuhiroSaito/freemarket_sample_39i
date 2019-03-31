@@ -1,0 +1,74 @@
+.single-container
+  %header.single-header
+    %h1
+      = link_to "" do
+        %img{alt: "mercari", height:"49", width:"185", src:"https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3679504431"}
+  %main.single-main
+    %section.l-single-container.buy-item-container
+      #sell-container
+        %div{"data-reactroot" => "" }
+          .sell-container-inner
+            %h2.l-single-head
+              商品情報を入力
+            %form.sell-form
+              .sell-upload-box
+                %h3.sell-upload-head
+                  出品画像
+                  %span.form-require
+                    必須
+                .p 最大10枚までアップロードできます。
+                .sell-dropbox-container.clreafix.state-image-number-10
+                  .sell-upload-items-container
+                    .sell-upload-items.has-item-0
+                      %ul
+                  .sell-upload-drop-box.have-item-0
+                    %input{ type: "file", class: "sell-upload-drop-file", multiple: "", name: "image1", style: "display:none"}
+                    %pre.visible-pc
+                      ドラッグアンドドロップ
+                      %br
+                      またはクリックしてファイルをアップロード
+                      %i.icon-camera
+              .sell-content
+                .form-group
+                  %label
+                    商品名
+                    %span.form-require
+                      必須
+                  %div
+                    %input.input-default{ value:"", placeholder:"商品名（必須 40文字まで）" }
+                .form-group
+                  %label
+                    商品の説明
+                    %span.form-require
+                      必須
+                  %textarea.textarea-default{ rows:"5", placeholder:"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"}
+              .sell-content.clearfix
+                %h3.sell-sub-head
+                  商品の詳細
+                .sell-form-box
+                  .form-group
+                    %label
+                      カテゴリー
+              .sell-content.clearfix
+              .sell-content.clearfix
+              .modal{ role:'dialog',tabindex: "-1" }
+              .sell-content.sell-btn-box
+            .overlay
+  %footer.sigle-footer
+    %nav
+      %ul.clrearfix
+        %li
+          = link_to "" do
+            プライバシーポリシー
+        %li
+          = link_to "" do
+            メルカリ利用規約
+        %li
+          = link_to "" do
+            特定商取引に関する表記
+    .single-footer-logo
+      = link_to "" do
+        %img{alt: "mercari", height:"65", width:"80", src:"https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3112359103"}
+    %p
+      %small
+        © 2019 Mercari
