@@ -16,7 +16,6 @@ $(function(){
   $('.header-find-box-grandchild__list').hover(
     function(){
       $(this).parent('ul.header-find-box-grandchild').parent('li.header-find-box-child__list').addClass("active-child");
-      console.log("hello");
     },
     function() {
       $(this).parent('ul.header-find-box-grandchild').parent('li.header-find-box-child__list').removeClass("active-child");
