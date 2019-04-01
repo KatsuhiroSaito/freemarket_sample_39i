@@ -1,11 +1,6 @@
 @import "color";
 @import "clearfix";
 
-.sample {
-  background: #ccc;
-  @include clearfix();
-}
-
 .product-box {
   position: relative;
   float: left;
