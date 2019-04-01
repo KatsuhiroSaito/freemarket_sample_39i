@@ -1,0 +1,14 @@
+.footer-help-guide {
+  @include footer-cell;
+  width: 23%;
+  padding: 0 40px 0 0;
+  &__head {
+    @extend .footer-about__head;
+  }
+  &__list {
+    @extend .footer-about__list;
+  }
+  &__link {
+    @include footer-link;
+  }
+}
