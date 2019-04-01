@@ -1,0 +1,27 @@
+%footer.footer
+  %nav.footer__upper
+    .footer-about
+      %h2.footer-about__head メルカリについて
+      %ul.footer-about__nav-listing
+        %li.footer-about__list
+          = link_to root_path, class: "footer-about__link" do
+            会社概要（運営会社）
+        %li.footer-about__list
+          = link_to root_path, class: "footer-about__link" do
+            採用情報
+        %li.footer-about__list
+          = link_to root_path, class: "footer-about__link" do
+            プレスリリース
+        %li.footer-about__list
+          = link_to root_path, class: "footer-about__link" do
+            公式ブログ
+        %li.footer-about__list
+          = link_to root_path, class: "footer-about__link" do
+            メルカリロゴ利用ガイドライン
+        %li.footer-about__social-link
+          = link_to "https://twitter.com/mercari_jp", class: "footer-about__link" do
+            = icon('fab', 'twitter', class: 'header-upper__icon')
+        %li.footer-about__social-link
+          = link_to "https://www.facebook.com/mercarijp", class: "footer-about__link" do
+            = icon('fab', 'facebook', class: 'header-upper__icon')
+  .footer__bottom
