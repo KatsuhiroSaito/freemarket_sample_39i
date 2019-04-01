@@ -1,0 +1,136 @@
+@import "clearfix";
+@import "color";
+@import "mixin";
+
+.header-mypage-box {
+  & a {
+    color: $nightRider;
+  }
+  display:none;
+  position: absolute;
+  top: 42px;
+  right: 0;
+  @include header-user-box;
+  & li {
+    list-style: none;
+  }
+  &__state {
+    text-align: center;
+  }
+  &__figure {
+    padding: 28px 0 0;
+    height: 80px;
+    background-image: url('/images/user-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 320px 80px;
+  }
+  &__user-icon {
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
+    &__figcaption {
+      margin: 8px 0 0;
+      padding: 0 8px;
+      font-size: 16px;
+      line-height: 16px;
+    }
+  }
+  &__user-information-listing {
+    margin: 40px 0 0;
+    padding: 8px 8px 0;
+    font-size: 0;
+    text-align: center;
+  }
+  &__review {
+    display: inline-block;
+    margin: 0;
+    font-size: 14px;
+    &__link:hover {
+      text-decoration: underline;
+      opacity: 0.7;
+    }
+  }
+  &__selling-item {
+    display: inline-block;
+    margin: 0 0 0 16px;
+    font-size: 14px;
+    &__link:hover {
+      @extend .header-mypage-box__review__link:hover;
+    }
+  }
+  &__sales-point {
+    width: 300px;
+    margin: 16px auto;
+    background-color: $darkwhite;
+    border: 1px solid $whiteSmoke;
+  }
+  &__sales {
+    padding: 0 8px;
+    &:hover {
+      opacity: 0.7;
+    }
+    &__link {
+      line-height: 40px;
+      @include clearfix;
+    }
+    &-left {
+      float: left;
+    }
+    &-right {
+      float: right;
+    }
+  }
+  &__point {
+    border-top: 1px solid $whiteSmoke;
+    padding: 0 8px;
+    &:hover {
+      @extend .header-mypage-box__sales:hover;
+    }
+    &__link {
+      line-height: 40px;
+      @include clearfix;
+    }
+    &-left {
+      float: left;
+    }
+    &-right {
+      float: right;
+    }
+  }
+  &__nav-list {
+    & .header-mypage-box__icon--arrow {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      -webkit-transition: all ease-out .2s;
+      transition: all ease-out .2s;
+    }
+    &__link {
+      position: relative;
+      display: block;
+      min-height: 48px;
+      padding: 16px;
+      background: $white;
+      color: $nightRider;
+      border-top: 1px solid $whiteSmoke;
+      line-height: 16px;
+      &:hover {
+        background: $darkwhite;
+      }
+      &:hover .header-mypage-box__icon--arrow{
+        -webkit-transform: translate(4px, -50%);
+        transform: translate(4px, -50%);
+        color: $nightRider;
+      }
+    }
+  }
+  &__icon--arrow {
+    color: $pacificBlue;
+  }
+}
