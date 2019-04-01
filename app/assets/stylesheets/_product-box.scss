@@ -1,0 +1,100 @@
+@import "color";
+@import "clearfix";
+
+.product-box {
+  position: relative;
+  float: left;
+  margin: 0 0 0 20px;
+  width: 213px;
+  background: $white;
+  &__link {
+    display: block;
+    color: $nightRider;
+    text-decoration: none;
+  }
+  &__figure {
+    overflow: hidden;
+    position: relative;
+    width: 213px;
+    height: 220px;
+    padding: 0 0 100%;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    &--higher-width {
+      width: auto;
+      left: 50%;
+      right: auto;
+      height: 100%;
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+  }
+  &__body {
+    padding: 16px;
+    height: 110px;
+  }
+  &__name {
+    overflow: hidden;
+    position: relative;
+    font-weight: 400;
+    height: 3em;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: normal;
+    font-size: 15px;
+    color: $nightRider;
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50%;
+      height: 1.5em;
+      background: -webkit-gradient(linear, left top, right top, from(rgba(255,255,255,0)), color-stop(72%, #fff));
+      background: linear-gradient(to right, rgba(255,255,255,0), #fff 72%);
+    }
+  }
+  &__num {
+    @include clearfix();
+    margin: 8px 0 0;
+    &__price {
+      position: relative;
+      float: left;
+      font-size: 20px;
+      font-weight: 500;
+      color: $nightRider;
+      line-height: 20px;
+    }
+    &__likes {
+      float: right;
+      font-size: 16px;
+      font-weight: 400;
+      color: $nightRider;
+      &-icon {
+        margin: 0 4px 0 0;
+        vertical-align: middle;
+        color: $veryLightGrey;
+      }
+      &-count {
+        display: inline-block;
+        margin: 1px 0 0;
+        vertical-align: middle;
+      }
+    }
+    &__tax {
+      font-size: 10px;
+      clear: both;
+      position: absolute;
+      left: 0;
+      top: 13px;
+    }
+  }
+}
