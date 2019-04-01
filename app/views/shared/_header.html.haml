@@ -319,11 +319,10 @@
                 %div.header-mypage__title マイページ
               .header-mypage-box
                 .header-mypage-box__state
-                  .header-mypage-box__figure
-                    %figure.header-mypage-box__user-icon
+                  %figure.header-mypage-box__figure
+                    .header-mypage-box__user-icon
                       = image_tag "//static.mercdn.net/thumb/members/150864990.jpg?1471007375#", width: "60"
-                      %figcaption.header-mypage-box__user-icon__figcaption
-                        Katsuhiro Saito
+                    %figcaption.header-mypage-box__user-icon__figcaption Katsuhiro Saito
                   %ul.header-mypage-box__user-information-listing
                     %li.header-mypage-box__review
                       = link_to root_path, class: "header-mypage-box__review__link" do
