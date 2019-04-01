@@ -3,8 +3,10 @@
 @import "mixin";
 
 .header-mypage-box {
-  display:none;
-  // color: $nightRider;
+  & a {
+    color: $nightRider;
+  }
+  // display:none;
   position: absolute;
   top: 42px;
   right: 0;
