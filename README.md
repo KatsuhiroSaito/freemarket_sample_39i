@@ -52,7 +52,7 @@
 |address_street|string|null: false  |
 |address_building|string|null: false  |
 |mobile_number|string|null: false  |
-|user_id|integer|foreign_key: true|
+|user|references|foreign_key: true|
 
 ### Association
 belongs_to :user
@@ -62,7 +62,7 @@ belongs_to :user
 |------|----|-------|
 |amount|integer|null: false  |
 |due_date|integer|null: false  |
-|user_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -74,7 +74,7 @@ belongs_to :user
 |title|string|null: false|
 |body|text|null: false|
 |due|date|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -85,7 +85,7 @@ belongs_to :user
 |due_year|integer|null: false  |
 |due_month|integer|null: false  |
 |security_code|string|null: false  |
-|user_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -93,8 +93,8 @@ belongs_to :user
 ## buyersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|transaction_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|transaction|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :transaction
 - belongs_to :user
@@ -106,8 +106,8 @@ belongs_to :user
 ## sellersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|transaction_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|transaction|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :transaction
 - belongs_to :user
@@ -117,10 +117,10 @@ belongs_to :user
 |Column|Type|Options|
 |------|----|-------|
 |transaction_status|integer|null: false  |
-|seller_id|integer|null: false, foreign_key: true|
-|buyer_id|integer|null: false, foreign_key: true|
-|product_id|integer|null: false, foreign_key: true|
-|review_id|integer|null: false, foreign_key: true|
+|seller|references|null: false, foreign_key: true|
+|buyer|references|null: false, foreign_key: true|
+|product|references|null: false, foreign_key: true|
+|review|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :product
@@ -146,8 +146,8 @@ belongs_to :user
 ## user_notificationsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|newsfeed_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|newsfeed|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :newsfeed
 - belongs_to :user
@@ -177,8 +177,8 @@ belongs_to :user
 ## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|product_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, ƒ: true|
+|product|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :product
 - belongs_to :user
@@ -195,15 +195,13 @@ belongs_to :user
 |------|----|-------|
 |name|string|null: false  |
 |description|text|null: false  |
-|top_category_id|integer|null: false, foreign_key: true|
-|mid_category_id|integer|null: false, foreign_key: true|
-|low_category_id|integer|null: false, foreign_key: true|
-|condition_id|integer|null: false, foreign_key: true|
-|delivery_fee_id|integer|null: false, foreign_key: true|
-|packing_day_id|integer|null: false, foreign_key: true|
+|category|references|null: false, foreign_key: true|
+|condition|references|null: false, foreign_key: true|
+|delivery_fee|references|null: false, foreign_key: true|
+|packing_day|references|null: false, foreign_key: true|
 |price|integer|null: false|
 |size|string|null: false|
-|brand_id|integer|foreign_key: true|
+|brand|references|foreign_key: true|
 
 
 ### Association
@@ -222,7 +220,8 @@ belongs_to :user
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false  add_index: true|
-|top_category_id|integer|foreign_key: true|
+|category|references|null: false, foreign_key: true|
+
 ### Association
 - belongs_to :top_category
 - has_many :products
@@ -230,39 +229,18 @@ belongs_to :user
 ##### 備考：
 - ブランド名で検索するのでインデックスを追加
 
-## top_categoriesテーブル
+## categoriesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
+|parent|references|null: false  foreign_key: true|
 
 ### Association
-- has_many :mid_categories
-
-## mid_categoriesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
-|top_category_id|integer|null: false  foreign_key: true|
-### Association
-- belongs_to :top_category
-- has_many :products
-- has_many :low_categories
+- belongs_to :parent, class_name: :Category
+- has_many :children, class_name: :Category, foreign_key: :parent_id
 
 ##### 備考：
-- top_categoryは親、low_categoryは子関係がある。
-
-## low_categoriesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|name|text|null: false  |
-|mid_category_id|integer|null: false  foreign_key: true|
-### Association
-- belongs_to :mid_category
-- has_many :products
-
-##### 備考：
-- mid_categoryは親テーブルがある。
-
+- 自己結合モデルでアソシエーションを組んでいる。一つのデーブルに全てのカテゴリーを格納して、親子関係を設定
 
 ## conditionsテーブル
 |Column|Type|Options|
@@ -278,8 +256,8 @@ belongs_to :user
 ## product_imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image_id|integer|null: false, foreign_key: true|
-|product_id|integer|null: false, foreign_key: true|
+|image|references|null: false, foreign_key: true|
+|product|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :product
