@@ -1,0 +1,104 @@
+%footer.footer
+  %nav.footer__upper
+    .footer-about
+      %h2.footer-about__head メルカリについて
+      %ul.footer-about__nav-listing
+        %li.footer-about__list
+          = link_to root_path, class: "footer-about__link" do
+            会社概要（運営会社）
+        %li.footer-about__list
+          = link_to root_path, class: "footer-about__link" do
+            採用情報
+        %li.footer-about__list
+          = link_to root_path, class: "footer-about__link" do
+            プレスリリース
+        %li.footer-about__list
+          = link_to root_path, class: "footer-about__link" do
+            公式ブログ
+        %li.footer-about__list
+          = link_to root_path, class: "footer-about__link" do
+            メルカリロゴ利用ガイドライン
+        %li.footer-about__social-link
+          = link_to "https://twitter.com/mercari_jp", class: "footer-about__link footer-about__link--social-link" do
+            = icon('fab', 'twitter', class: 'footer-about__icon footer-about__icon--twitter')
+        %li.footer-about__social-link
+          = link_to "https://www.facebook.com/mercarijp", class: "footer-about__link footer-about__link--social-link" do
+            = icon('fab', 'facebook', class: 'footer-about__icon footer-about__icon--facebook')
+    .footer-help-guide
+      %h2.footer-help-guide__head ヘルプ&ガイド
+      %ul.footer-help-guide__nav-listing
+        %li.footer-help-guide__list
+          = link_to root_path, class: "footer-help-guide__link" do
+            メルカリガイド
+        %li.footer-help-guide__list
+          = link_to root_path, class: "footer-help-guide__link" do
+            らくらくメルカリ便
+        %li.footer-help-guide__list
+          = link_to root_path, class: "footer-help-guide__link" do
+            ゆうゆうメルカリ便
+        %li.footer-help-guide__list
+          = link_to root_path, class: "footer-help-guide__link" do
+            大型メルカリ便
+        %li.footer-help-guide__list
+          = link_to root_path, class: "footer-help-guide__link" do
+            車体取引ガイド
+        %li.footer-help-guide__list
+          = link_to root_path, class: "footer-help-guide__link" do
+            メルカリあんしん・あんぜん宣言!
+        %li.footer-help-guide__list
+          = link_to root_path, class: "footer-help-guide__link" do
+            偽ブランド品撲滅への取り組み
+        %li.footer-help-guide__list
+          = link_to root_path, class: "footer-help-guide__link" do
+            メルカリボックス
+    .footer-privacy-TermsOfUse
+      %h2.footer-privacy-TermsOfUse__head プライバシーと利用規約
+      .footer-privacy-TermsOfUse__left
+        %ul.footer-privacy-TermsOfUse__nav-listing
+          %li.footer-privacy-TermsOfUse__list
+            = link_to root_path, class: "footer-privacy-TermsOfUse__link" do
+              プライバシーポリシー
+          %li.footer-privacy-TermsOfUse__list
+            = link_to root_path, class: "footer-privacy-TermsOfUse__link" do
+              メルカリ利用規約
+          %li.footer-privacy-TermsOfUse__list
+            = link_to root_path, class: "footer-privacy-TermsOfUse__link" do
+              メルカリ利用規約・有償ポイントに関する特約
+          %li.footer-privacy-TermsOfUse__list
+            = link_to root_path, class: "footer-privacy-TermsOfUse__link" do
+              あんしんスマホサポート制度に関する利用特約
+          %li.footer-privacy-TermsOfUse__list
+            = link_to root_path, class: "footer-privacy-TermsOfUse__link" do
+              コンプライアンスポリシー
+      .footer-privacy-TermsOfUse__right
+        %ul.footer-privacy-TermsOfUse__nav-listing
+          %li.footer-privacy-TermsOfUse__list
+            = link_to root_path, class: "footer-privacy-TermsOfUse__link" do
+              個人データの安全管理に係る基本方針
+          %li.footer-privacy-TermsOfUse__list
+            = link_to root_path, class: "footer-privacy-TermsOfUse__link" do
+              特定商取引に関する表記
+          %li.footer-privacy-TermsOfUse__list
+            = link_to root_path, class: "footer-privacy-TermsOfUse__link" do
+              資金決済法に基づく表示
+          %li.footer-privacy-TermsOfUse__list
+            = link_to root_path, class: "footer-privacy-TermsOfUse__link" do
+              法令順守と犯罪抑止のために
+          %li.footer-privacy-TermsOfUse__list
+            = link_to root_path, class: "footer-privacy-TermsOfUse__link" do
+              返品・返金ポリシー
+    .footer-country
+      %h2.footer-country__head 国
+      %ul.footer-country__nav-listing
+        %li.footer-country__list
+          = link_to root_path, class: "footer-country__link" do
+            日本
+        %li.footer-country__list
+          = link_to root_path, class: "footer-country__link" do
+            United States
+  .footer__bottom
+    = link_to root_path, class: "footer__bottom__logo" do
+      .footer__bottom__logo__image
+        = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo-white.svg?1188346331", width: "124", height: "33", alt: "mercari"
+    %span.footer__bottom__copyright © 2019 Mercari
+
