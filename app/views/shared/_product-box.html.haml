@@ -1,0 +1,13 @@
+%section.product-box
+  = link_to root_path, class: "product-box__link" do
+    %figure.product-box__figure
+      = image_tag "https://static.mercdn.net/thumb/photos/m11003944572_1.jpg?1553730547", class: "product-box__image product-box__image--higher-width", data: {src: "https://static.mercdn.net/thumb/photos/m11003944572_1.jpg?1553730547"}, alt: "CA4LA  ニット帽  ニットキャップ  未使用品  メンズ"
+    .product-box__body
+      %h3.product-box__name CA4LA  ニット帽  ニットキャップ  未使用品  メンズ
+      .product-box__num
+        .product-box__num__price
+          ¥ 2,280
+          %p.product-box__num__tax (税込)
+        .product-box__num__likes
+          = icon('far', 'heart', class: 'product-box__num__likes-icon')
+          %span.product-box__num__likes-count 1
