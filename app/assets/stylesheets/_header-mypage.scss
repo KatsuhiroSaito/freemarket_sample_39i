@@ -2,6 +2,9 @@
 @import "mixin";
 
 .header-mypage {
+  &:hover .header-mypage-box{
+    display: block;
+  }
   &__link {
     margin: 0;
     @include header_link
