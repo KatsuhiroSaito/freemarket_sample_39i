@@ -1,0 +1,30 @@
+@import "color";
+@import "clearfix";
+
+.products-box {
+  width: 940px;
+  margin: 0 auto;
+  &__head {
+    font-size: 22px;
+    margin: 26px 11px;
+    text-align: center;
+    &__link {
+      color: $pacificBlue;
+      text-decoration: none;
+    }
+  }
+  &__content {
+    width: auto;
+    @include clearfix();
+  }
+  &__view-all {
+    padding: 20px 0 30px;
+    width: 99.5%;
+    text-align: right;
+    &__link {
+      color: $pacificBlue;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  }
+}
