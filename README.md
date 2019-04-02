@@ -21,16 +21,17 @@
 |nickname|string|null: false  add_index:true|
 ### Association
 - has_many :transactions,through: :buyers
-- has_many :buyers
+- has_many :buyers, dependent: :destroy
 - has_many :transactions,through: :sellers
-- has_many :sellers
-- has_many :todolists
-- has_many :payment_methods
+- has_many :sellers, dependent: :destroy
+- has_many :todolists, dependent: :destroy
+- has_many :payment_methods, dependent: :destroy
 - has_many :products,through: :likes
-- has_many :likes
+- has_many :likes, dependent: :destroy
 - has_many :newsfeeds,through: :user_notifications
 - has_many :user_notifications
-- has_one :user_detail
+- has_one :user_detail, dependent: :destroy, class_name: UserDetail
+- has_one :point, dependent: :destroy, class_name: Point
 
 ##### 備考：
 - 基本情報は別のテーブルで記載
@@ -128,7 +129,7 @@ belongs_to :user
 - has_many :buyers
 - has_many :users,through: :sellers
 - has_many :sellers
-- has_many :review_id
+- has_many :reviews, dependent: :destroy
 
 ##### 備考：
 - transactionテーブルは２つの中間テーブル（buyer,seller）を経由してuserテーブルと多対多の関係性が存在
@@ -206,10 +207,10 @@ belongs_to :user
 
 ### Association
 - has_many :users,through: :likes
-- has_many :likes
-- has_many :product_images
+- has_many :likes, dependent: :destroy
+- has_many :product_images, dependent: :destroy
 - has_many :images,through: :product_images
-- has_many :transactions
+- has_many :transactions, dependent: :destroy
 
 ##### 備考：
 - productテーブルはtransaction-Userでつなぐべきなのか？
@@ -273,7 +274,7 @@ belongs_to :user
 |image_file_name|string|null: false|
 ### Association
 - has_many :products,through: :product_images
-- has_many :product_images
+- has_many :product_images, dependent: :destroy
 
 ##### 備考：
 - product_imagesを中間テーブルとしている
