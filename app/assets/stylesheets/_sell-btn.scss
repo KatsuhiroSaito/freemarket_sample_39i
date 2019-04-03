@@ -1,16 +1,16 @@
 @import "color";
 
 .sell-btn {
-  position: fixed;
-  bottom: 32px;
-  right: 32px;
-  z-index: 1000;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background: $cinnabar;
-  text-align: center;
   &__link {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+    background: $cinnabar;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    text-align: center;
     color: $white;
     font-size: 22px;
   }
