@@ -1,0 +1,23 @@
+@import "color";
+
+.sell-btn {
+  &__link {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 1000;
+    background: $cinnabar;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    text-align: center;
+    color: $white;
+    font-size: 22px;
+  }
+  &__text {
+    margin: 27px 0 0;
+  }
+  &__icon {
+    font-size: 60px;
+  }
+}
