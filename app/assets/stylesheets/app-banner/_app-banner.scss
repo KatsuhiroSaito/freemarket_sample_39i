@@ -1,0 +1,14 @@
+.app-banner {
+  background: image-url("download_bg_pc.jpg");
+  background-position: center;
+  background-size: cover;
+  &__wrapper {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 750px;
+    height: 260px;
+    margin: 0 auto;
+    color: #fff;
+  }
+}

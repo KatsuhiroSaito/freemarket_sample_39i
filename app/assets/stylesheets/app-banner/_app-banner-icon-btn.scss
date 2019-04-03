@@ -1,0 +1,6 @@
+@import "clearfix";
+
+.app-banner-icon-btn {
+  margin: 13px 0 0;
+  @include clearfix();
+}

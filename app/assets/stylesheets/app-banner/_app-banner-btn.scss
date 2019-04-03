@@ -1,0 +1,26 @@
+@import "clearfix";
+
+.app-banner-btn {
+  float: left;
+  margin: 0 0 0 24px;
+  line-height: 68px;
+  @include clearfix();
+  &__list {
+    list-style: none;
+    float: left;
+    &:last-child {
+      margin: 0 0 0 16px;
+    }
+  }
+  &__link {
+    display: block;
+    line-height: 68px;
+    &:hover {
+      text-decoration: underline;
+      opacity: .7;
+    }
+  }
+  &__image {
+    vertical-align: middle;
+  }
+}
