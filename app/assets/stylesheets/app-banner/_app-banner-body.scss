@@ -1,0 +1,11 @@
+.app-banner-body {
+  text-shadow: 0 0 5px rgba(0,0,0,0.4);
+  &__head {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 0;
+  }
+  &__text {
+    font-size: 35px;
+  }
+}
