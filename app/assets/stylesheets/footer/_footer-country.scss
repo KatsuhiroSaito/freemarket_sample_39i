@@ -1,0 +1,13 @@
+.footer-country {
+  @include footer-cell;
+  width: auto;
+  &__head {
+    @extend .footer-about__head;
+  }
+  &__list {
+    @extend .footer-about__list;
+  }
+  &__link {
+    @include footer-link;
+  }
+}

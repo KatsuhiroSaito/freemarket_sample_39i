@@ -1,0 +1,11 @@
+@import "color";
+
+.pickup {
+  padding: 40px 0;
+  background: $lightWhiteSmoke;
+  &__head {
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.4;
+  }
+}

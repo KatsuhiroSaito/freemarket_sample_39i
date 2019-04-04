@@ -1,0 +1,30 @@
+@import "color";
+@import "mixin";
+
+.header-mypage {
+  &:hover .header-mypage-box{
+    display: block;
+  }
+  &__link {
+    margin: 0;
+    @include header_link
+  }
+  &__figure {
+    line-height: 0;
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+  &__icon {
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  &__title {
+    display: inline-block;
+    margin: 0 0 0 8px;
+    vertical-align: middle;
+  }
+}

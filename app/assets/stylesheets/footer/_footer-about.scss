@@ -1,0 +1,38 @@
+.footer-about {
+  @include footer-cell;
+  width: 20%;
+  padding: 0 20px 0 0;
+  &__head {
+    color: $white;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.4;
+  }
+  &__list {
+    margin: 14px 0 0;
+    &:first-child {
+      margin: 16px 0 0;
+    }
+  }
+  &__link {
+    @include footer-link;
+    &--social-link {
+      opacity: 1;
+    }
+  }
+  &__social-link {
+    display: inline-block;
+    margin: 14px 0 0;
+    color: $white;
+  }
+  &__icon {
+    background: transparent;
+    margin: 16px 18px 0 0;
+    &--twitter {
+      font-size: 29px;
+    }
+    &--facebook {
+      font-size: 30px;
+    }
+  }
+}

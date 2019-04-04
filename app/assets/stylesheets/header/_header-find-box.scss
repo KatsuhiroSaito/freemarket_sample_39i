@@ -1,0 +1,72 @@
+@import "color";
+@import "mixin";
+
+.header-find-box {
+  &-parent {
+    display: none;
+    position: absolute;
+    top: 42px;
+    left: 3px;
+    z-index: 1000;
+    background: $white;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    width: auto;
+    &__list {
+      width: 224px;
+      &:hover .header-find-box-child {
+        display: block;
+      }
+    }
+    &__link {
+      @include header-find-box_link($cinnabar, 44px, $white);
+    }
+  }
+  &-child {
+    position: absolute;
+    top: 0;
+    left: 224px;
+    bottom: 0;
+    background: $white;
+    -webkit-box-shadow: 1px 0 0 0 $whiteSmoke inset;
+    box-shadow: 1px 0 0 0 $whiteSmoke inset;
+    display: none;
+    &__list {
+      width: 224px;
+      &:hover ul.header-find-box-grandchild {
+        display: block;
+      }
+    }
+    &__link {
+      @include header-find-box_link($whiteSmoke, 14px, $nightRider);
+      padding: 8px 16px;
+    }
+  }
+  &-grandchild {
+    position: absolute;
+    top: 0;
+    left: 224px;
+    bottom: 0;
+    background: $white;
+    -webkit-box-shadow: 1px 0 0 0 $whiteSmoke inset;
+    box-shadow: 1px 0 0 0 $whiteSmoke inset;
+    display: none;
+    &__list {
+      width: 320px;
+    }
+    &__link {
+      @include header-find-box_link($whiteSmoke, 14px, $nightRider);
+      padding: 8px 16px;
+    }
+  }
+}
+
+.active-parent>a{
+  background-color: $cinnabar;
+  color: $white;
+}
+
+.active-child>a{
+  background-color: $whiteSmoke;
+  color: $nightRider;
+}

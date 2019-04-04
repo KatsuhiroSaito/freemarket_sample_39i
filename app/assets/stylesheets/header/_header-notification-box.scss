@@ -1,0 +1,72 @@
+@import "color";
+@import "mixin";
+
+.header-notification-box {
+  display: none;
+  position: absolute;
+  top: 42px;
+  left: 0;
+  @include header-user-box;
+  &__list {
+    position: relative;
+    border-bottom: 1px solid $whiteSmoke;
+    list-style: none;
+  }
+  &__link {
+    display: block;
+    min-height: 80px;
+    padding: 16px;
+    color: $nightRider;
+    &:hover {
+      background-color: $darkwhite;
+      opacity: 1;
+    }
+  }
+  &__figure {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48px;
+    height: 48px;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+  }
+  &__body {
+    margin: 0 40px 0 68px;
+  }
+  &__text {
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    max-height: 4.4em;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+  }
+  &__time {
+    display: inline-block;
+    color: $suvaGrey;
+  }
+  &__icon {
+    &--clock {
+      margin: 0 8px 0 0;
+      color: $pacificBlue;
+    }
+    &--arrow {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      color: $pacificBlue;
+    }
+  }
+}

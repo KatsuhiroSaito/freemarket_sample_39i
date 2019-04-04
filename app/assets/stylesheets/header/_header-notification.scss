@@ -1,0 +1,21 @@
+@import "color";
+@import "mixin";
+
+.header-notification {
+  &:hover .header-notification-box {
+    display: block;
+  }
+  &:hover .header-notification__icon {
+    color: $pacificBlue;
+  }
+  &__link {
+    @include header_link
+  }
+  &__title {
+    margin: 0 0 0 8px;
+  }
+  &__icon {
+    font-size: 17px;
+    color: $veryLightGrey;
+  }
+}

@@ -1,0 +1,33 @@
+@import "color";
+@import "mixin";
+
+.header-find {
+  font-size: 0;
+  &__list {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 22px;
+    &--category {
+      padding: 0 0 0 2px;
+      &:hover .header-find-box-parent {
+        display: block;
+      }
+    }
+    &--brand {
+      &:hover .header-find-box-parent {
+        display: block;
+      }
+    }
+  }
+  &__title {
+    font-weight: bold;
+  }
+  &__root {
+    @include header_link
+  }
+  &__icon {
+    color: $cinnabar;
+    margin-right: 4px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,20 @@
+.footer__bottom {
+  margin: 30px auto 20px;
+  width: 1020px;
+  &__logo {
+    display: inline-block;
+    margin-right: 10px;
+    width: auto;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__copyright {
+    display: inline-block;
+    margin: 8px 0 0;
+    text-align: center;
+    vertical-align: sub;
+    font-size: 12px;
+    width: 745px;
+  }
+}
