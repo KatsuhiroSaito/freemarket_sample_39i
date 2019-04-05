@@ -1,0 +1,84 @@
+@import "color";
+@import "mixin";
+
+.slide-banner {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  &__link {
+    display: block;
+    &--natsukashi {
+      background: image_url("banner-natsukashi.jpg");
+      background-size: auto 100%;
+      background-position: center;
+    }
+    &--new-life {
+      background: image_url("banner-new-life.jpg");
+      background-size: auto 100%;
+      background-position: center;
+    }
+    &--app {
+      background: image_url("main_bg_pc.jpg");
+      background-size: cover;
+    }
+    &--bokurano-heisei {
+      background: image_url("banner-bokurano-heisei.jpg");
+      background-size: auto 100%;
+      background-position: center;
+    }
+  }
+  & .owl-nav {
+    color: transparent;
+    display: block;
+  }
+  & .owl-prev {
+    @include slide-banner-owl-nav-btn;
+    left: 60px;
+    background-image: image_url("carousel-prev.png") !important;
+  }
+  & .owl-next {
+    @include slide-banner-owl-nav-btn;
+    right: 60px;
+    background-image: image_url("carousel-next.png") !important;
+  }
+  & .owl-dots {
+    display: block;
+    margin: -30px;
+    text-align: center;
+  }
+  & .owl-dot {
+    position: relative;
+    background: $white !important;
+    opacity: 0.4;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    min-height: 12px;
+    margin-right: 15px;
+    &.active {
+      opacity: 1;
+      background: rgba(0,0,0,0.5) !important;
+    }
+  }
+  & .owl-stage-outer, .owl-stage, .owl-item, .owl-item>a {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 1068px) {
+  .slide-banner {
+    height: 390px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1068px) {
+  .slide-banner {
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide-banner .owl-dots {
+    display: none;
+  }
+}
