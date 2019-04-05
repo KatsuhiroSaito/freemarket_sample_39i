@@ -1,5 +1,16 @@
 @import "color";
 
+@mixin slide-banner-owl-nav-btn {
+  cursor: pointer;
+  height: 46px;
+  width: 31px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-23px);
+  transform: translateY(-23px);
+}
+
+
 // header
 @mixin header_link {
   display: block;
