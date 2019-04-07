@@ -1,18 +1,15 @@
 .single-container
-  %header.single-header
-    %h1
-      = link_to "" do
-        %img{alt: "mercari", height:"49", width:"185", src:"https://www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3679504431"}
+  = render 'shared/single-header'
   %main.single-main
     .login-panel
       .login-no-account
-        %p
+        %p.login-no-account__para
           アカウントをお持ちでない方はこちら
-          = link_to "" do
+          = link_to "", class: 'login-no-account__para--btn-blue' do
             新規会員登録
       .login-form-inner
         %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
-          %i.fa.fa-facebook-square.fa-2x.icon-facebook
+          %i.fab.fa-facebook-square.fa-2x.icon-facebook
           &nbsp;&nbsp;Facebookでログイン
         %button#google-login.btn-default.btn-sns.btn-sns-google
           &nbsp;&nbsp;Googleでログイン
@@ -29,7 +26,7 @@
                   %iframe{:frameborder => "0", :height => "78", :name => "a-shqc32qjqbfp", :role => "presentation", :sandbox => "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", :scrolling => "no", :src => "https://www.google.com/recaptcha/api2/anchor?ar=2&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1552285980763&size=normal&cb=ufsa2sdzaz1g", :width => "304"}
             %button.login-submit.btn-default.btn-red{ type:'submit'} ログイン
             %input{ type:'hidden', name:'__csrf_value',value:"" }
-            = link_to "パスワードをお忘れの方",""
+            = link_to "パスワードをお忘れの方","",class: 'form-group__link-pass'
     %form#login_form_facebook{ action:'/jp/login/facebook/', method:'POST',novalidate: "novalidate"}
       %input{ type:'hidden', name:'__csrf_value',value:"" }
       %input{ type:'hidden', name:'nickname',value:"" }
@@ -46,21 +43,4 @@
       %input{ type:'hidden', name:'google_access_token',value:"" }
     %input{ type:'hidden', name:'google_client_id',value:"" }
     %input{ type:'hidden', name:'facebook_app_id',value:"" }
-  %footer.sigle-footer
-    %nav
-      %ul.clrearfix
-        %li
-          = link_to "" do
-            プライバシーポリシー
-        %li
-          = link_to "" do
-            メルカリ利用規約
-        %li
-          = link_to "" do
-            特定商取引に関する表記
-    .single-footer-logo
-      = link_to "" do
-        %img{alt: "mercari", height:"65", width:"80", src:"https://www-mercari-jp.akamaized.net/assets/img/common/common/logo-gray.svg?3112359103"}
-    %p
-      %small
-        © 2019 Mercari
+  = render 'shared/single-footer'

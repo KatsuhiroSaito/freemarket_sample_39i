@@ -1,0 +1,55 @@
+.btn-default{
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  cursor: pointer;
+  text-align: center;
+}
+.btn-mail{
+  position: relative;
+  color: black;
+  background: $whiteSmoke;
+  height: 48px;
+  .icon-mail{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+    color: $veryLightGrey;
+    font-size: 18px;
+  }
+}
+.btn-sns{
+  position: relative;
+}
+.btn-sns-facebook{
+  margin: 16px 0 0;
+  background: $toryBlue;
+  color: $white;
+  .icon-facebook{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+  }
+}
+.btn-sns-google{
+  margin: 16px 0 0;
+  color: $nightRider;
+  border: $borderBlack solid 1px;
+  background: $white url("google_logo.jpeg") no-repeat;
+  background-position: 12px 50%;
+}
+.btn-red{
+    background: $cinnabar;
+    border: 1px solid $cinnabar;
+    color: $white;
+}
+.login-submit{
+  margin: 24px 0 0;
+}
+

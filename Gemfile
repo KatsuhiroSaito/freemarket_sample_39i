@@ -71,3 +71,4 @@ gem 'erb2haml'
 gem 'font-awesome-sass', '~> 5.8.1'
 gem 'haml-rails'
 gem 'pry-rails'
+gem "recaptcha", require: "recaptcha/rails"
