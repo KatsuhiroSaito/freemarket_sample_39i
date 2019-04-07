@@ -15,18 +15,18 @@
           &nbsp;&nbsp;Googleでログイン
       %form{ action: "https://www.mercari.com/jp/login/", method:'POST',novalidate: "novalidate"}
         .login-form-inner
-          .form-group
-            %input{ type:"email", name:"email", value:"", placeholder:"メールアドレス", class: "login-input-text input-default"}
-          .form-group
-            %input{ type:"password", name:"password", placeholder:"パスワード", class: "login-input-text input-default"}
-          .form-group
+          .login-form-group
+            %input{ type:"email", name:"email", value:"", placeholder:"メールアドレス", class: "login-input-text login-form-group__input-default"}
+          .login-form-group
+            %input{ type:"password", name:"password", placeholder:"パスワード", class: "login-input-text login-form-group__input-default"}
+          .login-form-group
             .g-recaptcha.login-captcha{"data-sitekey" => "{}"}
               %div{:style => "width: 304px; height: 78px;"}
                 %div
                   %iframe{:frameborder => "0", :height => "78", :name => "a-shqc32qjqbfp", :role => "presentation", :sandbox => "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", :scrolling => "no", :src => "https://www.google.com/recaptcha/api2/anchor?ar=2&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1552285980763&size=normal&cb=ufsa2sdzaz1g", :width => "304"}
             %button.login-submit.btn-default.btn-red{ type:'submit'} ログイン
             %input{ type:'hidden', name:'__csrf_value',value:"" }
-            = link_to "パスワードをお忘れの方","",class: 'form-group__link-pass'
+            = link_to "パスワードをお忘れの方","",class: 'login-form-group__link-pass'
     %form#login_form_facebook{ action:'/jp/login/facebook/', method:'POST',novalidate: "novalidate"}
       %input{ type:'hidden', name:'__csrf_value',value:"" }
       %input{ type:'hidden', name:'nickname',value:"" }

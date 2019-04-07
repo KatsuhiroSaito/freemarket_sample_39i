@@ -25,10 +25,10 @@
         }
       }
       .login-form-inner{
-        padding: 32px 64px;
-        .form-group{
+        padding: 24px 64px;
+        .login-form-group{
           margin:24px 0 0;
-          .input-default{
+          &__input-default{
             width: 100%;
             height: 48px;
             padding: 10px 16px 8px;
