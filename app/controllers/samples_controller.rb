@@ -1,11 +1,11 @@
 class SamplesController < ApplicationController
-  def sample
+  def index
     render 'sample'
   end
-  def login
+  def show
     render 'login'
   end
-  def signup
+  def new
     render 'signup'
   end
 end
