@@ -3,7 +3,7 @@
     .header-upper
       %h1.header-upper__left
         = link_to root_path, class: "header-upper__left-link" do
-          = image_tag "//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3112359103", size: "134x36", alt: "mercari"
+          = image_tag "logo.svg", size: "134x36", alt: "mercari"
       %form.header-upper__right{action: '/'}
         %input.header-upper__search{type: "search", name: "keyword", placeholder: "何かお探しですか？"}
         = icon('fas', 'search', class: 'header-upper__icon')
@@ -256,7 +256,7 @@
                 %li.header-notification-box__list
                   = link_to root_path, class: "header-notification-box__link" do
                     %figure.header-notification-box__figure
-                      = image_tag "//static.mercdn.net/images/mercari_profile.png", class: "header-notification-box__image"
+                      = image_tag "mercari_profile.png", class: "header-notification-box__image"
                     .header-notification-box__body
                       .header-notification-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
                       .header-notification-box__time
@@ -266,7 +266,7 @@
                 %li.header-notification-box__list
                   = link_to root_path, class: "header-notification-box__link" do
                     %figure.header-notification-box__figure
-                      = image_tag "//static.mercdn.net/images/mercari_profile.png", class: "header-notification-box__image"
+                      = image_tag "mercari_profile.png", class: "header-notification-box__image"
                     .header-notification-box__body
                       .header-notification-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
                       .header-notification-box__time
@@ -276,7 +276,7 @@
                 %li.header-notification-box__list
                   = link_to root_path, class: "header-notification-box__link" do
                     %figure.header-notification-box__figure
-                      = image_tag "//static.mercdn.net/images/mercari_profile.png", class: "header-notification-box__image"
+                      = image_tag "mercari_profile.png", class: "header-notification-box__image"
                     .header-notification-box__body
                       .header-notification-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
                       .header-notification-box__time
@@ -286,7 +286,7 @@
                 %li.header-notification-box__list
                   = link_to root_path, class: "header-notification-box__link" do
                     %figure.header-notification-box__figure
-                      = image_tag "//static.mercdn.net/images/mercari_profile.png", class: "header-notification-box__image"
+                      = image_tag "mercari_profile.png", class: "header-notification-box__image"
                     .header-notification-box__body
                       .header-notification-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
                       .header-notification-box__time
@@ -296,7 +296,7 @@
                 %li.header-notification-box__list
                   = link_to root_path, class: "header-notification-box__link" do
                     %figure.header-notification-box__figure
-                      = image_tag "//static.mercdn.net/images/mercari_profile.png", class: "header-notification-box__image"
+                      = image_tag "mercari_profile.png", class: "header-notification-box__image"
                     .header-notification-box__body
                       .header-notification-box__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
                       .header-notification-box__time
@@ -315,31 +315,31 @@
               = link_to root_path, class: "header-mypage__link" do
                 %figure.header-mypage__figure
                   %div.header-mypage__icon
-                    = image_tag "//static.mercdn.net/thumb/members/150864990.jpg?1471007375#", size: "32"
+                    = image_tag "sample-user-icon.jpg", size: "32"
                 %div.header-mypage__title マイページ
               .header-mypage-box
                 .header-mypage-box__state
                   %figure.header-mypage-box__figure
                     .header-mypage-box__user-icon
-                      = image_tag "//static.mercdn.net/thumb/members/150864990.jpg?1471007375#", width: "60"
-                    %figcaption.header-mypage-box__user-icon__figcaption Katsuhiro Saito
+                      = image_tag "sample-user-icon.jpg", width: "60"
+                    %figcaption.header-mypage-box__user-icon-figcaption Katsuhiro Saito
                   %ul.header-mypage-box__user-information-listing
                     %li.header-mypage-box__review
-                      = link_to root_path, class: "header-mypage-box__review__link" do
+                      = link_to root_path, class: "header-mypage-box__review-link" do
                         評価:0
                     %li.header-mypage-box__selling-item
-                      = link_to root_path, class: "header-mypage-box__selling-item__link" do
+                      = link_to root_path, class: "header-mypage-box__selling-item-link" do
                         出品数:1
                   %ul.header-mypage-box__sales-point
                     %li.header-mypage-box__sales
-                      = link_to root_path, class: "header-mypage-box__sales__link" do
+                      = link_to root_path, class: "header-mypage-box__sales-link" do
                         .header-mypage-box__sales-left
                           売上金
                         .header-mypage-box__sales-right
                           ¥ 0
                           = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
                     %li.header-mypage-box__point
-                      = link_to root_path, class: "header-mypage-box__point__link" do
+                      = link_to root_path, class: "header-mypage-box__point-link" do
                         .header-mypage-box__point-left
                           ポイント
                         .header-mypage-box__point-right
@@ -347,26 +347,26 @@
                           = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
                 %ul.header-mypage-box__nav-listing
                   %li.header-mypage-box__nav-list
-                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                    = link_to root_path, class: "header-mypage-box__nav-list-link" do
                       いいね!一覧
                       = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
                   %li.header-mypage-box__nav-list
-                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                    = link_to root_path, class: "header-mypage-box__nav-list-link" do
                       出品した商品 - 出品中
                       = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
                   %li.header-mypage-box__nav-list
-                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                    = link_to root_path, class: "header-mypage-box__nav-list-link" do
                       出品した商品 - 取引中
                       = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
                   %li.header-mypage-box__nav-list
-                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                    = link_to root_path, class: "header-mypage-box__nav-list-link" do
                       出品した商品 - 売却済み
                       = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
                   %li.header-mypage-box__nav-list
-                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                    = link_to root_path, class: "header-mypage-box__nav-list-link" do
                       購入した商品 - 取引中
                       = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
                   %li.header-mypage-box__nav-list
-                    = link_to root_path, class: "header-mypage-box__nav-list__link" do
+                    = link_to root_path, class: "header-mypage-box__nav-list-link" do
                       購入した商品 - 過去の取引
                       = icon('fas', 'chevron-right', class: 'header-mypage-box__icon--arrow')
