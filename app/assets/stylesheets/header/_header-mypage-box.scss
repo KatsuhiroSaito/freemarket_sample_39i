@@ -32,7 +32,7 @@
     border-radius: 50%;
     -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
     box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
-    &__figcaption {
+    &-figcaption {
       margin: 8px 0 0;
       padding: 0 8px;
       font-size: 16px;
@@ -49,7 +49,7 @@
     display: inline-block;
     margin: 0;
     font-size: 14px;
-    &__link:hover {
+    &-link:hover {
       text-decoration: underline;
       opacity: 0.7;
     }
@@ -58,8 +58,8 @@
     display: inline-block;
     margin: 0 0 0 16px;
     font-size: 14px;
-    &__link:hover {
-      @extend .header-mypage-box__review__link:hover;
+    &-link:hover {
+      @extend .header-mypage-box__review-link:hover;
     }
   }
   &__sales-point {
@@ -73,7 +73,7 @@
     &:hover {
       opacity: 0.7;
     }
-    &__link {
+    &-link {
       line-height: 40px;
       @include clearfix;
     }
@@ -90,7 +90,7 @@
     &:hover {
       @extend .header-mypage-box__sales:hover;
     }
-    &__link {
+    &-link {
       line-height: 40px;
       @include clearfix;
     }
@@ -111,7 +111,7 @@
       -webkit-transition: all ease-out .2s;
       transition: all ease-out .2s;
     }
-    &__link {
+    &-link {
       position: relative;
       display: block;
       min-height: 48px;
