@@ -1,5 +1,27 @@
 = render 'shared/header'
 
+%section.slide-banner.owl-carousel
+  = link_to "", root_path, class: "slide-banner__link slide-banner__link--natsukashi"
+  = link_to "", root_path, class: "slide-banner__link slide-banner__link--new-life"
+  .slide-banner-app
+    .slide-banner-app__inner
+      .slide-banner-app__content
+        %h2.slide-banner-app__content-head
+          スマホでかんたん
+          %br
+          フリマアプリ
+        %p.slide-banner-app__content-text
+          メルカリはスマホカメラからすぐに出品できる
+          %br
+          購入時も安心な独自システムのアプリです
+        .slide-banner-app__download
+          = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8", class: "slide-banner-app__download-link", target: "_blank" do
+            = image_tag "app-store.svg", class: "slide-banner-app__download-image"
+          = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja", class: "slide-banner-app__download-link", target: "_blank" do
+            = image_tag "google-play.svg", class: "slide-banner-app__download-image"
+      = image_tag "main_content_pc.png", class: "slide-banner-app__image"
+  = link_to "", root_path, class: "slide-banner__link slide-banner__link--bokurano-heisei"
+
 %section.pickup
   %h2.pickup__head ピックアップカテゴリー
   %section.products-box
