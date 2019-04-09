@@ -16,11 +16,11 @@
   }
   &__link {
     @include footer-link;
-    &--social-link {
+    &--sns-link {
       opacity: 1;
     }
   }
-  &__social-link {
+  &__sns-link {
     display: inline-block;
     margin: 14px 0 0;
     color: $white;
