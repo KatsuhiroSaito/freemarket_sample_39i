@@ -8,23 +8,13 @@
   &__link {
     display: block;
     &--natsukashi {
-      background: image_url("banner-natsukashi.jpg");
-      background-size: auto 100%;
-      background-position: center;
+      @include slide-banner-owl-item-background("banner-natsukashi.jpg");
     }
     &--new-life {
-      background: image_url("banner-new-life.jpg");
-      background-size: auto 100%;
-      background-position: center;
-    }
-    &--app {
-      background: image_url("main_bg_pc.jpg");
-      background-size: cover;
+      @include slide-banner-owl-item-background("banner-new-life.jpg");
     }
     &--bokurano-heisei {
-      background: image_url("banner-bokurano-heisei.jpg");
-      background-size: auto 100%;
-      background-position: center;
+      @include slide-banner-owl-item-background("banner-bokurano-heisei.jpg");
     }
   }
   & .owl-nav {
@@ -32,14 +22,12 @@
     display: block;
   }
   & .owl-prev {
-    @include slide-banner-owl-nav-btn;
+    @include slide-banner-owl-nav-btn("carousel-prev.png");
     left: 60px;
-    background-image: image_url("carousel-prev.png") !important;
   }
   & .owl-next {
-    @include slide-banner-owl-nav-btn;
+    @include slide-banner-owl-nav-btn("carousel-next.png");
     right: 60px;
-    background-image: image_url("carousel-next.png") !important;
   }
   & .owl-dots {
     display: block;
