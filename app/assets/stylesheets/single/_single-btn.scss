@@ -41,13 +41,13 @@
   margin: 16px 0 0;
   color: $nightRider;
   border: $borderBlack solid 1px;
-  background: $white url("google_logo.jpeg") no-repeat;
+  background-image: image-url("google_logo.jpeg");
   background-position: 12px 50%;
 }
 .btn-red{
-    background: $cinnabar;
-    border: 1px solid $cinnabar;
-    color: $white;
+  background: $cinnabar;
+  border: 1px solid $cinnabar;
+  color: $white;
 }
 .login-submit{
   margin: 24px 0 0;
