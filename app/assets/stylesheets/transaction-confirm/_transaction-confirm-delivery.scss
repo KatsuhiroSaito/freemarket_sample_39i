@@ -1,0 +1,25 @@
+@import "mixin";
+@import "color";
+
+.transaction-confirm-delivery {
+  &__inner {
+    @include buy-content-inner;
+  }
+  &__header {
+    font-size: 14px;
+  }
+  &__address {
+    @include buy-user-info-text;
+    display: block;
+    font-style: normal;
+  }
+  &__buy-user-info {
+    @include buy-user-info-text;
+  }
+  &__fix {
+    display: block;
+    text-align: right;
+    color: $pacificBlue;
+    font-size: 14px;
+  }
+}
