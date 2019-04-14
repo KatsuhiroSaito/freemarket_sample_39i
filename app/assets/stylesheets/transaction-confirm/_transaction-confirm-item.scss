@@ -1,0 +1,18 @@
+@import "mixin";
+
+.transaction-confirm-item {
+  @include buy-content-inner;
+  &__image {
+    width: 148px;
+    &--higher-height {
+      width: auto;
+      max-height: 148px;
+    }
+  }
+  &__name {
+    margin: 8px 0 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+}
