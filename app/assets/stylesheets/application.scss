@@ -10,7 +10,10 @@
 @import "./sell-btn";
 @import "./slide-banner-app";
 @import "./slide-banner";
-@import "./transaction-confirm";
+
+// 商品購入確認ページ
+@import "./transaction-confirm/transaction-confirm-item";
+@import "./transaction-confirm/transaction-confirm";
 
 // owl carousel
 @import "owl.carousel";
