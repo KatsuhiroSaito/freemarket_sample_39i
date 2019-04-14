@@ -4,10 +4,10 @@
   &__first{
     display: inline-block;
     margin:40px 0 0;
-    &--image{
-      width: 185px;
-      height: 49px;
-      line-height: 49px;
-    }
+  }
+  &__image{
+  width: 185px;
+  height: 49px;
+  line-height: 49px;
   }
 }

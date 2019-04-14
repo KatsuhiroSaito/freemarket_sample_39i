@@ -8,23 +8,23 @@
           = link_to "", class: 'login-no-account__para--btn-blue' do
             新規会員登録
       .login-form-inner
-        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+        %button#facebook-login.login-btn-sns-facebook.btn-sns-facebook
           %i.fab.fa-facebook-square.fa-2x.icon-facebook
           &nbsp;&nbsp;Facebookでログイン
-        %button#google-login.btn-default.btn-sns.btn-sns-google
+        %button#google-login.login-btn-sns-google
           &nbsp;&nbsp;Googleでログイン
-      %form{ action: "https://www.mercari.com/jp/login/", method:'POST',novalidate: "novalidate"}
+      %form{ action: "", method:'POST',novalidate: "novalidate"}
         .login-form-inner
           .login-form-group
-            %input{ type:"email", name:"email", value:"", placeholder:"メールアドレス", class: "login-input-text login-form-group__input-default"}
+            %input{ type:"email", name:"email", value:"", placeholder:"メールアドレス", class: "login-form-group__input-default"}
           .login-form-group
-            %input{ type:"password", name:"password", placeholder:"パスワード", class: "login-input-text login-form-group__input-default"}
+            %input{ type:"password", name:"password", placeholder:"パスワード", class: "login-form-group__input-default"}
           .login-form-group
             .g-recaptcha.login-captcha{"data-sitekey" => "{}"}
               %div{:style => "width: 304px; height: 78px;"}
                 %div
                   %iframe{:frameborder => "0", :height => "78", :name => "a-shqc32qjqbfp", :role => "presentation", :sandbox => "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox", :scrolling => "no", :src => "https://www.google.com/recaptcha/api2/anchor?ar=2&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1552285980763&size=normal&cb=ufsa2sdzaz1g", :width => "304"}
-            %button.login-submit.btn-default.btn-red{ type:'submit'} ログイン
+            %button.login-btn-submit{ type:'submit'} ログイン
             %input{ type:'hidden', name:'__csrf_value',value:"" }
             = link_to "パスワードをお忘れの方","",class: 'login-form-group__link-pass'
     %form#login_form_facebook{ action:'/jp/login/facebook/', method:'POST',novalidate: "novalidate"}
