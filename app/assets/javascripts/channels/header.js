@@ -1,6 +1,4 @@
 $(function(){
-
-
   // 中カテゴリーの1つにホバーしたとき、その親の大カテゴリーに'active-parent'というクラス名を与える。
   $('.header-find-box-child__list').hover(
     function(){

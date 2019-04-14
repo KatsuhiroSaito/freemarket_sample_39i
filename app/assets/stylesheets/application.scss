@@ -8,6 +8,8 @@
 @import "./product-box";
 @import "./products-box";
 @import "./sell-btn";
+@import "./slide-banner-app";
+@import "./slide-banner";
 
 //sigleページ（login,signupのページ）の設定
 @import "./single/single-container";
@@ -30,6 +32,9 @@
 @import "./single/signup-btn-sns-facebook";
 @import "./single/signup-btn-sns-google";
 
+// owl carousel
+@import "owl.carousel";
+@import "owl.theme.default";
 
 // header
 @import "./header/header-find-box";
@@ -47,11 +52,11 @@
 
 // footer
 @import "./footer/footer-about";
+@import "./footer/footer-bottom";
 @import "./footer/footer-country";
 @import "./footer/footer-help-guide";
 @import "./footer/footer-privacy-TermsOfUse";
 @import "./footer/footer";
-@import "./footer/footer__bottom";
 
 // app-banner
 @import "./app-banner/app-banner-body";

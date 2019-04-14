@@ -65,36 +65,36 @@
   &__num {
     @include clearfix();
     margin: 8px 0 0;
-    &__price {
-      position: relative;
-      float: left;
-      font-size: 20px;
-      font-weight: 500;
-      color: $nightRider;
-      line-height: 20px;
+  }
+  &__price {
+    position: relative;
+    float: left;
+    font-size: 20px;
+    font-weight: 500;
+    color: $nightRider;
+    line-height: 20px;
+  }
+  &__tax {
+    font-size: 10px;
+    clear: both;
+    position: absolute;
+    left: 0;
+    top: 13px;
+  }
+  &__likes {
+    float: right;
+    font-size: 16px;
+    font-weight: 400;
+    color: $nightRider;
+    &-icon {
+      margin: 0 4px 0 0;
+      vertical-align: middle;
+      color: $veryLightGrey;
     }
-    &__likes {
-      float: right;
-      font-size: 16px;
-      font-weight: 400;
-      color: $nightRider;
-      &-icon {
-        margin: 0 4px 0 0;
-        vertical-align: middle;
-        color: $veryLightGrey;
-      }
-      &-count {
-        display: inline-block;
-        margin: 1px 0 0;
-        vertical-align: middle;
-      }
-    }
-    &__tax {
-      font-size: 10px;
-      clear: both;
-      position: absolute;
-      left: 0;
-      top: 13px;
+    &-count {
+      display: inline-block;
+      margin: 1px 0 0;
+      vertical-align: middle;
     }
   }
 }
