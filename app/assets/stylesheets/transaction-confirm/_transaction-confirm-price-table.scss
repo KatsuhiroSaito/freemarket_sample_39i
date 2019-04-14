@@ -1,3 +1,5 @@
+@import "color";
+
 .transaction-confirm-price-table {
   display: table;
   border-collapse: collapse;
@@ -5,7 +7,7 @@
   list-style: none;
   &__row {
     display: table-row;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $veryLightGrey;
     font-weight: 600;
     font-size: 28px;
     &:first-child {
