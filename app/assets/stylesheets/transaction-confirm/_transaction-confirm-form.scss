@@ -1,0 +1,47 @@
+@import "color";
+
+.transaction-confirm-form {
+  &__price {
+    margin: 8px 0 0;
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 28px;
+    &-shipping-fee {
+      margin: 0 0 0 8px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  &__point {
+    &--not-have {
+      background: $veryLightGrey;
+    }
+    &-wrapper {
+      margin: 16px 0 0;
+      list-style: none;
+    }
+    &-text {
+      line-height: 14px;
+      padding: 16px;
+      font-size: 14px;
+    }
+  }
+  &__confirmation-btn {
+    margin: 16px 0 0;
+    font-weight: 600;
+    // btn-red
+    background: $cinnabar;
+    border: 1px solid $cinnabar;
+    color: #fff;
+    // btn-default
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+  }
+}
