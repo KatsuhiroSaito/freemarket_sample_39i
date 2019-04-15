@@ -1,0 +1,12 @@
+.single-footer-nav{
+  @include clearfix();
+  display: block;
+  &__list{
+    display: inline-block;
+    font-size: 12px;
+    padding: 0 0 0 12px;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}

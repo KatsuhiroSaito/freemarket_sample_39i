@@ -73,3 +73,78 @@
     text-decoration: underline;
   }
 }
+
+//ログインと新規登録に使うボタンの共通スタイル
+@mixin btn-mail{
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  position: relative;
+  color: black;
+  background: $whiteSmoke;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  height: 48px;
+  .icon-mail{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+    color: $veryLightGrey;
+    font-size: 18px;
+  }
+}
+
+@mixin btn-sns-facebook{
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  margin: 16px 0 0;
+  background: $toryBlue;
+  color: $white;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  .icon-facebook{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin btn-sns-google{
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  margin: 16px 0 0;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  color: $nightRider;
+  border: $borderBlack solid 1px;
+  background-image: image-url("google_logo.jpeg");
+  background-position: 12px 50%;
+}
+
+@mixin btn-red{
+  display: block;
+  width: 100%;
+  line-height: 48px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  background: $cinnabar;
+  border: 1px solid $cinnabar;
+  color: $white;
+  margin: 24px 0 0;
+}
+
+

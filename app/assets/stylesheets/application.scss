@@ -11,6 +11,27 @@
 @import "./slide-banner-app";
 @import "./slide-banner";
 
+//sigleページ（login,signupのページ）の設定
+@import "./single/single-container";
+@import "./single/single-footer";
+@import "./single/single-footer-nav";
+@import "./single/single-footer-logo";
+@import "./single/single-footer-copyright";
+@import "./single/single-header";
+@import "./single/login-panel";
+@import "./single/login-no-account";
+@import "./single/login-form-group";
+@import "./single/login-form-inner";
+@import "./single/login-btn-sns-facebook";
+@import "./single/login-btn-sns-google";
+@import "./single/login-btn-submit";
+@import "./single/l-single-container";
+@import "./single/l-single-head";
+@import "./single/l-single-inner";
+@import "./single/signup-btn-mail";
+@import "./single/signup-btn-sns-facebook";
+@import "./single/signup-btn-sns-google";
+
 // owl carousel
 @import "owl.carousel";
 @import "owl.theme.default";
