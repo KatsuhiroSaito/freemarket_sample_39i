@@ -95,8 +95,8 @@
             United States
   .footer__bottom
     = link_to root_path, class: "footer-bottom__logo" do
-      .footer-bottom__logo-image
-        = image_tag "logo-white.svg", width: "124", height: "33", alt: "mercari"
+      .footer-bottom__logo-wrapper
+        = image_tag "logo-white.svg", class: "footer-bottom__logo", alt: "mercari"
     %span.footer-bottom__copyright
       %small © 2019 Mercari
 
