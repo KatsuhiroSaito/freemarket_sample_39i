@@ -1,14 +1,10 @@
 .login-no-account{
-  padding: 40px 64px;
+  padding: 35px 64px;
   text-align: center;
   border-bottom: 1px solid $whiteSmoke;
   &__para{
     font-size: 14px;
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     &--btn-blue{
       display: block;
       margin: 8px 0 0;
