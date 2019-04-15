@@ -6,6 +6,6 @@ class SamplesController < ApplicationController
     render 'login'
   end
   def new
-    render 'signup'
+    render 'credit-card'
   end
 end

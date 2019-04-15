@@ -1,0 +1,8 @@
+.mypage-main{
+  @include clearfix();
+  padding: 40px 40px;
+  margin: 0 auto 0;
+  width: 1150px;
+  background-color: $lightWhiteSmoke;
+  display: block;
+}

@@ -11,6 +11,30 @@
 @import "./slide-banner-app";
 @import "./slide-banner";
 
+//mypageのスタイル
+@import "./mypage/mypage";
+@import "./mypage/mypage-main";
+@import "./mypage/mypage-sidebar-box";
+@import "./mypage/mypage-sidebar-list";
+@import "./mypage/mypage-sidebar-nav-head";
+
+
+//クレジットカード画面のスタイル
+@import "./card/card-content";
+@import "./card/card-content-container";
+@import "./card/card-chapter-head";
+@import "./card/card-content-inner";
+@import "./card/card-content-inner-box";
+@import "./card/card-form";
+@import "./card/card-settings-payment-list";
+@import "./card/card-form-figure";
+@import "./card/card-settings-payment-num";
+@import "./card/card-settings-payment-remove";
+@import "./card/card-settings-not-regist";
+
+
+
+
 //sigleページ（login,signupのページ）の設定
 @import "./single/single-container";
 @import "./single/single-footer";
