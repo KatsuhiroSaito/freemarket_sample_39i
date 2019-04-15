@@ -25,18 +25,21 @@
     background-size: 320px 80px;
   }
   &__user-icon {
-    overflow: hidden;
     width: 60px;
-    height: 60px;
-    margin: 0 auto;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
-    &-figcaption {
-      margin: 8px 0 0;
-      padding: 0 8px;
-      font-size: 16px;
-      line-height: 16px;
+    &-wrapper {
+      overflow: hidden;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      border-radius: 50%;
+      -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,0.08);
+      &-figcaption {
+        margin: 8px 0 0;
+        padding: 0 8px;
+        font-size: 16px;
+        line-height: 16px;
+      }
     }
   }
   &__user-information-listing {
