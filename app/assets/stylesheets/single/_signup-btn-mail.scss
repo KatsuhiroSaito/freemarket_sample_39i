@@ -1,0 +1,8 @@
+.signup-btn-mail{
+  @include btn-mail();
+  -webkit-transition: all ease-out .3s;
+  transition: all ease-out .3s;
+  &:hover{
+    opacity: 0.7;
+  }
+}

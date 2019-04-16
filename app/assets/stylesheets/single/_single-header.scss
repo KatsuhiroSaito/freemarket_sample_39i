@@ -1,0 +1,16 @@
+.single-header{
+  height: 128px;
+  text-align: center;
+  &__first{
+    display: inline-block;
+    margin:40px 0 0;
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+  &__image{
+  width: 185px;
+  height: 49px;
+  line-height: 49px;
+  }
+}

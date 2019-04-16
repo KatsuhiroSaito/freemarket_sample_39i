@@ -1,0 +1,13 @@
+.card-settings-not-regist{
+  &__link-path{
+    display: block;
+    margin: 40px 0 0;
+    text-align: right;
+    color: $pacificBlue;
+    text-decoration: none;
+    font-size: 14px;
+    &:hover{//マウスオーバで要素を変化
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,10 +1,14 @@
 .footer-bottom {
   &__logo {
-    display: inline-block;
-    margin-right: 10px;
-    width: auto;
-    &:hover {
-      opacity: 0.7;
+    width: 124px;
+    height: 33px;
+    &-wrapper {
+      display: inline-block;
+      margin-right: 10px;
+      width: auto;
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
   &__copyright {
@@ -12,7 +16,9 @@
     margin: 8px 0 0;
     text-align: center;
     vertical-align: sub;
-    font-size: 12px;
     width: 745px;
+    &-text {
+      font-size: 11px;
+    }
   }
 }

@@ -108,26 +108,7 @@
       =link_to root_path, class: "products-box__view-all-link" do
         すべての商品を見る
 
-%aside.app-banner
-  .app-banner__wrapper
-    .app-banner-left
-      .app-banner-body
-        %h2.app-banner-body__head スマホでかんたんフリマアプリ
-        %p.app-banner-body__text 今すぐ無料ダウンロード！
-      .app-banner-icon-btn
-        .app-banner-icon
-          %figure.app-banner-icon__figure
-            = image_tag "mercari_icon.png", class: "app-banner-icon__image", width: "68px";
-        %ul.app-banner-btn
-          %li.app-banner-btn__list
-            = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8", class: "app-banner-btn__link", target: "_blank" do
-              = image_tag "app-store.svg", class: "app-banner-btn__image", width: "133", height: "40"
-          %li.app-banner-btn__list
-            = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja", class: "app-banner-btn__link", target: "_blank" do
-              = image_tag "google-play.svg", class: "app-banner-btn__image", width: "133", height: "40"
-    .app-banner-right
-      %figure.app-banner-right__figure
-        = image_tag "download_content_pc.png", class: "app-banner-right__image"
-
+= render 'shared/app-banner'
 = render 'shared/sell-btn'
 = render 'shared/footer'
+

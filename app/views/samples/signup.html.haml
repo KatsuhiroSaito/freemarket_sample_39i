@@ -1,0 +1,34 @@
+.single-container
+  = render 'shared/single-header'
+  %main.single-main
+    %section.l-single-container
+      %h2.l-single-head
+        新規会員登録
+      .l-single-inner
+        .l-single-inner__content
+          = link_to "", class: "signup-btn-mail" do
+            %i.fa.fa-envelope.icon-mail
+            &nbsp;&nbsp;メールアドレスで登録
+          %button#facebook-login.signup-btn-sns-facebook
+            %i.fab.fa-facebook-square.fa-2x.icon-facebook
+            &nbsp;&nbsp;Facebookで登録
+          %button#google-login.signup-btn-sns-google
+            &nbsp;&nbsp;Googleで登録
+    %form#login_form_facebook{ action:'/jp/signup/facebook/', method:'POST'}
+      %input{ type:'hidden', name:'__csrf_value',value:"" }
+      %input{ type:'hidden', name:'nickname',value:"" }
+      %input{ type:'hidden', name:'facebook_user_id',value:"" }
+      %input{ type:'hidden', name:'email',value:"" }
+      %input{ type:'hidden', name:'login_type',value:"facebook" }
+      %input{ type:'hidden', name:'facebook_access_token',value:"" }
+    %form#login_form_google{ action:'/jp/signup/google/', method:'POST'}
+      %input{ type:'hidden', name:'__csrf_value',value:"" }
+      %input{ type:'hidden', name:'nickname',value:"" }
+      %input{ type:'hidden', name:'email',value:"" }
+      %input{ type:'hidden', name:'google_user_id',value:"" }
+      %input{ type:'hidden', name:'login_type',value:"google" }
+      %input{ type:'hidden', name:'google_access_token',value:"" }
+    %input{ type:'hidden', name:'google_client_id',value:"" }
+    %input{ type:'hidden', name:'facebook_app_id',value:"" }
+  %div.signup-bottom
+  = render 'shared/single-footer'
