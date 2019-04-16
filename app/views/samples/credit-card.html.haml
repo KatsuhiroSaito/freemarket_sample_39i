@@ -1,0 +1,34 @@
+.mypage
+  = render 'shared/header'
+  .mypage-main
+    = render 'shared/mypage-sidebar'
+    .card-content
+      %section.card-content-container
+        %h2.card-chapter-head
+          支払い方法
+        .card-content-inner
+          %section.card-content-inner-box
+            %h3.card-content-inner-box__sub-head
+              クレジットカード一覧
+            %ul.card-settings-payment-list
+              %li.card-settings-payment-list__item
+                %form.card-form{ action: "", method: 'POST' }
+                  %figure.card-form-figure
+                    = image_tag "icons-mastercard.jpeg", alt: "master-card", width: "34", height: "30", class: '.card-form-figure__logo'
+                  %input{ type:'hidden', name:'__csrf_value',value:"" }
+                  %input{ type:'hidden', name:'card_sequence_no',value:"" }
+                  .card-settings-payment-num
+                    XXXXXXXXXX
+                  .card-settings-payment-num
+                    XX / XX
+                  %input{ type: 'hidden', name: 'method', value: "card" }
+                  %button.card-settings-payment-remove{ type: 'submit' }
+                    削除する
+          .card-settings-not-regist
+            = link_to "", class: 'card-settings-not-regist__link-path' do
+              %span.card-settings-not-regist__text
+                支払い方法について
+              %i.fas.fa-angle-right
+  = render 'shared/sell-btn'
+  = render 'shared/app-banner.html'
+  = render 'shared/footer'
