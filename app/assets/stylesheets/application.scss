@@ -2,7 +2,6 @@
 @import "font-awesome";
 @import "./color";
 @import "./global";
-@import "./logout";
 @import "./clearfix";
 @import "./mixin";
 @import "./pickup";
@@ -65,6 +64,9 @@
 @import "./single/signup-btn-mail";
 @import "./single/signup-btn-sns-facebook";
 @import "./single/signup-btn-sns-google";
+
+// ログアウトページ
+@import "./logout/logout";
 
 
 // owlcarousel-railsを使うのに必要なファイル
