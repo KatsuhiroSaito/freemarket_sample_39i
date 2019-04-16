@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resource :mypages do
       collection do
         get 'card'
+        get 'logout'
       end
     end
   end

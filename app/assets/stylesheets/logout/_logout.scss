@@ -1,0 +1,11 @@
+@import "color";
+
+.logout {
+  width: 700px;
+  float: right;
+  background: $white;
+  margin-right: 30px;
+  &__form {
+    padding: 64px;
+  }
+}
