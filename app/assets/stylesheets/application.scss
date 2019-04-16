@@ -52,11 +52,12 @@
 @import "./single/l-single-container";
 @import "./single/l-single-head";
 @import "./single/l-single-inner";
+@import "./single/signup-bottom";
 @import "./single/signup-btn-mail";
 @import "./single/signup-btn-sns-facebook";
 @import "./single/signup-btn-sns-google";
 
-// owl carousel
+// owlcarousel-railsを使うのに必要なファイル
 @import "owl.carousel";
 @import "owl.theme.default";
 

@@ -1,11 +1,10 @@
 .single-footer-copyright{
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  line-height: 14px;
+  padding-top: 8px;
   &__small{
     margin: 30px 0 0;
-    font-size: 13px;
+    font-size: 12px;
+    color: $nightRider;
   }
 }
