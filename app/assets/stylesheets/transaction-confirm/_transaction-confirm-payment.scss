@@ -1,0 +1,20 @@
+@import "mixin";
+
+.transaction-confirm-payment {
+  &__inner {
+    @include buy-content-inner;
+  }
+  &__header {
+    @extend .transaction-confirm-delivery__header;
+  }
+  &__buy-user-info {
+    @include buy-user-info-text;
+  }
+  &__fix {
+    @extend .transaction-confirm-delivery__fix;
+  }
+  &__card-icon {
+    width: 34px;
+    height: 20px;
+  }
+}

@@ -11,6 +11,16 @@
 @import "./slide-banner-app";
 @import "./slide-banner";
 
+
+// 商品購入確認ページ
+@import "./transaction-confirm/transaction-confirm-delivery";
+@import "./transaction-confirm/transaction-confirm-form";
+@import "./transaction-confirm/transaction-confirm-item";
+@import "./transaction-confirm/transaction-confirm-payment";
+@import "./transaction-confirm/transaction-confirm-price-table";
+@import "./transaction-confirm/transaction-confirm";
+
+
 //mypageのスタイル
 @import "./mypage/mypage";
 @import "./mypage/mypage-main";
@@ -31,8 +41,6 @@
 @import "./card/card-settings-payment-num";
 @import "./card/card-settings-payment-remove";
 @import "./card/card-settings-not-regist";
-
-
 
 
 //sigleページ（login,signupのページ）の設定
@@ -57,9 +65,11 @@
 @import "./single/signup-btn-sns-facebook";
 @import "./single/signup-btn-sns-google";
 
+
 // owlcarousel-railsを使うのに必要なファイル
 @import "owl.carousel";
 @import "owl.theme.default";
+
 
 // header
 @import "./header/header-find-box";
@@ -75,6 +85,7 @@
 @import "./header/header-upper";
 @import "./header/header";
 
+
 // footer
 @import "./footer/footer-about";
 @import "./footer/footer-bottom";
@@ -82,6 +93,7 @@
 @import "./footer/footer-help-guide";
 @import "./footer/footer-privacy-TermsOfUse";
 @import "./footer/footer";
+
 
 // app-banner
 @import "./app-banner/app-banner-body";

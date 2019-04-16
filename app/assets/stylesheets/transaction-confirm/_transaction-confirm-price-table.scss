@@ -1,0 +1,25 @@
+@import "color";
+
+.transaction-confirm-price-table {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+  list-style: none;
+  &__row {
+    display: table-row;
+    border-top: 1px solid $veryLightGrey;
+    font-weight: 600;
+    font-size: 28px;
+    &:first-child {
+      border: 0;
+    }
+  }
+  &__cell {
+    display: table-cell;
+    padding: 16px 0;
+    text-align: right;
+    &:first-child {
+      text-align: left;
+    }
+  }
+}

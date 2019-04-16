@@ -1,0 +1,53 @@
+%main.transaction-confirm
+  %section.transaction-confirm__container
+    %h2.transaction-confirm__header 購入を確定しますか？
+    %section.transaction-confirm__buy-item
+      .transaction-confirm-item
+        .transaction-confirm-item__image-wrapper
+          = image_tag "sample-product2.jpg", class: "transaction-confirm-item__image transaction-confirm-item__image--higher-height", data: {src: "https://static.mercdn.net/thumb/photos/m24313891639_1.jpg?1555201129"}
+        .transaction-confirm-item__name ナイキ NIKE 靴ひも
+        %form.transaction-confirm-form{ action:'/', method:'POST', novalidate: "novalidate"}
+          %p.transaction-confirm-form__price
+            ¥ 490
+            %span.transaction-confirm-form__price-shipping-fee 送料込み
+          %ul.transaction-confirm-form__point.transaction-confirm-form__point--not-have
+            %li.transaction-confirm-form__point-wrapper
+              .transaction-confirm-form__point-text ポイントはありません
+          %ul.transaction-confirm-price-table
+            %li.transaction-confirm-price-table__row
+              .transaction-confirm-price-table__cell 支払い金額
+              .transaction-confirm-price-table__cell
+                %span.transaction-confirm-price-table__price{data: {src: "490"}}
+                  ¥ 490
+          %input{type: "hidden", name: "", value: ""}
+          %button.transaction-confirm-form__confirmation-btn{type: "submit"} 購入する
+    %section.transaction-confirm__buy-user-info-delivery
+      .transaction-confirm-delivery
+        .transaction-confirm-delivery__inner
+          %h3.transaction-confirm-delivery__header
+            配送先
+          %address.transaction-confirm-delivery__address
+            〒123-4567
+            %br
+            東京都 渋谷区 1-23-4
+            %br
+            齋藤克弘
+          %p.transaction-confirm-delivery__buy-user-info
+          = link_to root_path, class: "transaction-confirm-delivery__fix" do
+            %span.transaction-confirm-delivery__fix-text 変更する
+            = icon('fas', 'chevron-right', class: 'transaction-confirm-delivery__fix-icon')
+    %section.transaction-confirm__buy-user-info-payment{data: {buy: "pay-method"}}
+      .transaction-confirm-payment
+        .transaction-confirm-payment__inner
+          %h3.transaction-confirm-payment__header
+            支払い方法
+          %p.transaction-confirm-payment__buy-user-info
+            ************1234
+            %br
+            09 / 25
+          %figure.transaction-confirm-payment__figure
+            = image_tag "master-card.svg", class: "transaction-confirm-payment__card-icon", alt: "master-card"
+          = link_to root_path, class: "transaction-confirm-payment__fix" do
+            %span.transaction-confirm-payment__fix-text 変更する
+            = icon('fas', 'chevron-right', class: 'transaction-confirm-payment__fix-icon')
+

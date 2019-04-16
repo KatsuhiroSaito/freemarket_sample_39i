@@ -8,4 +8,7 @@ class SamplesController < ApplicationController
   def new
     render 'credit-card'
   end
+
+  def confirm
+  end
 end
