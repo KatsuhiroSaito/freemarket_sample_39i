@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'samples#sample'
   get "/confirm" => "samples#confirm"
   root 'samples#index'
-  resources  :samples, only: [:index, :show, :new]
+  resources  :users, only: [:index, :new]
 end
