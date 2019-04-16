@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
-  def index
-    render "login"
-  end
-
-  def new
-    render "signup"
+  def card
+    render "credit-card"
   end
 end
