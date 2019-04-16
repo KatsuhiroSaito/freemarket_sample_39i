@@ -1,3 +1,4 @@
 %header.single-header
   %h1.single-header__first
-    = link_to image_tag("logo-mercari-name.svg", alt: "mercari", class: 'single-header__image'), root_path
+    = link_to root_path, class: "single-header__link" do
+      = image_tag("logo-mercari-name.svg", alt: "mercari", class: 'single-header__image')
