@@ -1,4 +1,5 @@
 %main.transaction-confirm
+  = render 'shared/single-header'
   %section.transaction-confirm__container
     %h2.transaction-confirm__header 購入を確定しますか？
     %section.transaction-confirm__buy-item
@@ -50,4 +51,4 @@
           = link_to root_path, class: "transaction-confirm-payment__fix" do
             %span.transaction-confirm-payment__fix-text 変更する
             = icon('fas', 'chevron-right', class: 'transaction-confirm-payment__fix-icon')
-
+= render 'shared/single-footer'
