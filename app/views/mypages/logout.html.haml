@@ -3,6 +3,11 @@
 .mypage
   .mypage-main
     = render 'shared/mypage-sidebar'
+    .logout
+      .logout__form
+        = link_to destroy_user_session_path, class: "logout-form", method: :delete do
+          .logout-form__inner
+            %button.logout-form__btn ログアウト
 
 = render 'shared/app-banner'
 = render 'shared/sell-btn'
