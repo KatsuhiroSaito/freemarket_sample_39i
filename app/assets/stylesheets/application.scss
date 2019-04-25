@@ -24,9 +24,13 @@
 //mypageのスタイル
 @import "./mypage/mypage-container";
 @import "./mypage/mypage-main";
+@import "./mypage/mypage-notification-todo";
 @import "./mypage/mypage-sidebar-box";
 @import "./mypage/mypage-sidebar-list";
 @import "./mypage/mypage-sidebar-nav-head";
+@import "./mypage/mypage-tab-content";
+@import "./mypage/mypage-tab-notification";
+@import "./mypage/mypage-tabs";
 @import "./mypage/mypage-user-icon";
 @import "./mypage/mypage-user-number";
 @import "./mypage/mypage";
