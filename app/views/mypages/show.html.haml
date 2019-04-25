@@ -3,6 +3,19 @@
 .mypage
   .mypage-main
     = render 'shared/mypage-sidebar'
+    .mypage-container
+      %section.mypage-user-icon
+        = link_to root_path, class: "mypage-user-icon__link" do
+          %figure.mypage-user-icon__figure
+            = image_tag "sample-user-icon.jpg", class: "mypage-user-icon__image"
+          %p.mypage-user-icon__name Katsuhiro Saito
+          .mypage-user-number
+            .mypage-user-number__review
+              評価
+              %span.mypage-user-number__count 0
+            .mypage-user-number__selling-item
+              出品数
+              %span.mypage-user-number__count 1
 
 = render 'shared/app-banner'
 = render 'shared/sell-btn'
