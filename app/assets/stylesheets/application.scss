@@ -22,11 +22,12 @@
 
 
 //mypageのスタイル
-@import "./mypage/mypage";
+@import "./mypage/mypage-container";
 @import "./mypage/mypage-main";
 @import "./mypage/mypage-sidebar-box";
 @import "./mypage/mypage-sidebar-list";
 @import "./mypage/mypage-sidebar-nav-head";
+@import "./mypage/mypage";
 
 
 //クレジットカード画面のスタイル
