@@ -22,9 +22,9 @@
 
 
 //mypageのスタイル
+@import "./mypage/mypage-transaction-old";
 @import "./mypage/js-mypage";
 @import "./mypage/mypage-container";
-@import "./mypage/mypage-deals";
 @import "./mypage/mypage-main";
 @import "./mypage/mypage-notification-todo";
 @import "./mypage/mypage-sidebar-box";
@@ -34,6 +34,8 @@
 @import "./mypage/mypage-tab-notification";
 @import "./mypage/mypage-tab-todo";
 @import "./mypage/mypage-tabs";
+@import "./mypage/mypage-transaction-now";
+@import "./mypage/mypage-transaction";
 @import "./mypage/mypage-user-icon";
 @import "./mypage/mypage-user-number";
 @import "./mypage/mypage";
