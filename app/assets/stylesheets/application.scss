@@ -81,6 +81,10 @@
 @import "./logout/logout";
 
 
+// プロフィール編集ページ
+@import "./profile-edit/profile-edit-container";
+
+
 // owlcarousel-railsを使うのに必要なファイル
 @import "owl.carousel";
 @import "owl.theme.default";
