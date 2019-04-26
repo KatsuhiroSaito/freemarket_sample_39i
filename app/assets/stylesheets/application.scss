@@ -22,7 +22,9 @@
 
 
 //mypageのスタイル
+@import "./mypage/js-mypage";
 @import "./mypage/mypage-container";
+@import "./mypage/mypage-deals";
 @import "./mypage/mypage-main";
 @import "./mypage/mypage-notification-todo";
 @import "./mypage/mypage-sidebar-box";
