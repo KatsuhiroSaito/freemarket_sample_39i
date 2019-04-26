@@ -1,0 +1,21 @@
+.profile-edit-content {
+  padding: 40px 16px;
+  &__introduction {
+    min-height: 216px;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 0;
+    outline: 0;
+    -webkit-appearance: none;
+  }
+  &__btn {
+    @include btn-red;
+    margin: 16px 0 0;
+  }
+}
