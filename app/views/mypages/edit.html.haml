@@ -3,6 +3,19 @@
 .mypage
   .mypage-main
     = render 'shared/mypage-sidebar'
+    .profile-edit-container
+      %section.profile-edit
+        %h2.profile-edit__head プロフィール
+        %form.profile-edit__form{ action:'/', method:'POST', novalidate: "novalidate"}
+          %input{type: "hidden", name: "", value: ""}
+          .profile-edit-icon
+            %figure.profile-edit-icon__figure
+              = image_tag "sample-user-icon.jpg", class: "profile-edit-icon__image"
+            %input{class: "profile-edit-icon__name",type: "text", name: "nickname", value: "Katsuhiro Saito", placeholder: "例)AYA☆セール中"}
+          .profile-edit-content
+            %textarea{class: "profile-edit-content__introduction", name: "introduction", placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+            %input{type: "hidden", name: "after_save_callback", value: "/"}
+            %button.profile-edit-content__btn{type: "submit"} 変更する
 
 = render 'shared/app-banner'
 = render 'shared/sell-btn'
