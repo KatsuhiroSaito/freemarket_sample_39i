@@ -1,0 +1,10 @@
+@import "color";
+
+.js-mypage-tab-active {
+  border-top: 2px solid $cinnabar;
+  background: $white;
+}
+
+.js-mypage-content-active {
+  display: block !important;
+}
