@@ -1,6 +1,3 @@
-@import "color";
-@import "clearfix";
-
 .header-upper {
   @include clearfix;
   &__left {
