@@ -1,0 +1,12 @@
+@import "color";
+@import "mixin";
+
+.mypage-tab-transaction-now {
+  list-style: none;
+  display: none;
+  &__list {
+    &--not-found {
+      @include mypage-list-not-found();
+    }
+  }
+}
