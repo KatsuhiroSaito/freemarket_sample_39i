@@ -1,0 +1,9 @@
+.mypage-tab-todo {
+  display:none;
+  list-style: none;
+  &__list {
+    &--not-found {
+      @include mypage-list-not-found();
+    }
+  }
+}

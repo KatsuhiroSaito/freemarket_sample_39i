@@ -1,0 +1,101 @@
+= render 'shared/header'
+
+.mypage
+  .mypage-main
+    = render 'shared/mypage-sidebar'
+    .mypage-container
+      %section.mypage-user-icon
+        = link_to root_path, class: "mypage-user-icon__link" do
+          %figure.mypage-user-icon__figure
+            = image_tag "sample-user-icon.jpg", class: "mypage-user-icon__image"
+          %p.mypage-user-icon__name Katsuhiro Saito
+          .mypage-user-number
+            .mypage-user-number__review
+              評価
+              %span.mypage-user-number__count 0
+            .mypage-user-number__selling-item
+              出品数
+              %span.mypage-user-number__count 1
+      %section.mypage-notification-todo
+        %ul.mypage-tabs
+          %li.mypage-tabs__list.js-mypage-tab.js-mypage-tab-notification.js-mypage-tab-active
+            .mypage-tabs__link
+              お知らせ
+          %li.mypage-tabs__list.js-mypage-tab.js-mypage-tab-todo
+            .mypage-tabs__link
+              やることリスト
+        .mypage-tab-content
+          %ul.mypage-tab-notification.js-mypage-content-active#js-mypage-notification
+            %li.mypage-tab-notification__list
+              = link_to root_path, class: "mypage-tab-notification__link" do
+                %figure.mypage-tab-notification__figure
+                  = image_tag "mercari_profile.png", class: "mypage-tab-notification__image"
+                .mypage-tab-notification__body
+                  .mypage-tab-notification__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
+                  .mypage-tab-notification__time
+                    = icon('far', 'clock', class: 'mypage-tab-notification__icon--clock')
+                    %span 8時間前
+                = icon('fas', 'chevron-right', class: 'mypage-tab-notification__icon--arrow')
+            %li.mypage-tab-notification__list
+              = link_to root_path, class: "mypage-tab-notification__link" do
+                %figure.mypage-tab-notification__figure
+                  = image_tag "mercari_profile.png", class: "mypage-tab-notification__image"
+                .mypage-tab-notification__body
+                  .mypage-tab-notification__text セブン-イレブンの揚げ物が¥11！クーポン続々！お得な「メルペイ」活用術
+                  .mypage-tab-notification__time
+                    = icon('far', 'clock', class: 'mypage-tab-notification__icon--clock')
+                    %span 2日前
+                = icon('fas', 'chevron-right', class: 'mypage-tab-notification__icon--arrow')
+            %li.mypage-tab-notification__list
+              = link_to root_path, class: "mypage-tab-notification__link" do
+                %figure.mypage-tab-notification__figure
+                  = image_tag "mercari_profile.png", class: "mypage-tab-notification__image"
+                .mypage-tab-notification__body
+                  .mypage-tab-notification__text 《大好評》必ずもらえる買う買うキャンペーン開催中！
+                  .mypage-tab-notification__time
+                    = icon('far', 'clock', class: 'mypage-tab-notification__icon--clock')
+                    %span 5日前
+                = icon('fas', 'chevron-right', class: 'mypage-tab-notification__icon--arrow')
+            %li.mypage-tab-notification__list
+              = link_to root_path, class: "mypage-tab-notification__link" do
+                %figure.mypage-tab-notification__figure
+                  = image_tag "mercari_profile.png", class: "mypage-tab-notification__image"
+                .mypage-tab-notification__body
+                  .mypage-tab-notification__text 《期間限定》セブン−イレブンで揚げ物が¥11！お店で使えるクーポンを配信中
+                  .mypage-tab-notification__time
+                    = icon('far', 'clock', class: 'mypage-tab-notification__icon--clock')
+                    %span 6日前
+                = icon('fas', 'chevron-right', class: 'mypage-tab-notification__icon--arrow')
+            %li.mypage-tab-notification__list
+              = link_to root_path, class: "mypage-tab-notification__link" do
+                %figure.mypage-tab-notification__figure
+                  = image_tag "mercari_profile.png", class: "mypage-tab-notification__image"
+                .mypage-tab-notification__body
+                  .mypage-tab-notification__text 事務局から個別メッセージ「振込申請ルール変更予定のお知らせ」
+                  .mypage-tab-notification__time
+                    = icon('far', 'clock', class: 'mypage-tab-notification__icon--clock')
+                    %span 8日前
+                = icon('fas', 'chevron-right', class: 'mypage-tab-notification__icon--arrow')
+            %li.mypage-tab-notification__list.mypage-tab-notification__list--view-all
+              = link_to root_path, class: "mypage-tab-notification__link--view-all" do
+                一覧を見る
+          %ul.mypage-tab-todo#js-mypage-todo
+            %li.mypage-tab-todo__list.mypage-tab-todo__list--not-found 現在、やることリストはありません
+      %section.mypage-transaction
+        %h2.mypage-transaction__head 購入した商品
+        %ul.mypage-tabs
+          %li.mypage-tabs__list.js-mypage-tab.js-mypage-tab-transaction-now.js-mypage-tab-active
+            .mypage-tabs__link 取引中
+          %li.mypage-tabs__list.js-mypage-tab.js-mypage-tab-transaction-old
+            .mypage-tabs__link 過去の取引
+        .mypage-tab-content
+          %ul.mypage-tab-transaction-now.js-mypage-content-active#js-mypage-transaction-now
+            %li.mypage-tab-transaction-now__list.mypage-tab-transaction-now__list--not-found
+              取引中の商品がありません
+          %ul.mypage-tab-transaction-old#js-mypage-transaction-old
+            %li.mypage-tab-transaction-old__list.mypage-tab-transaction-old__list--not-found
+              過去に取引した商品がありません
+
+= render 'shared/app-banner'
+= render 'shared/sell-btn'
+= render 'shared/footer'

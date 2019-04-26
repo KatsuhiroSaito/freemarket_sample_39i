@@ -1,0 +1,9 @@
+.mypage-tab-transaction-old {
+  list-style: none;
+  display: none;
+  &__list {
+    &--not-found {
+      @include mypage-list-not-found();
+    }
+  }
+}
