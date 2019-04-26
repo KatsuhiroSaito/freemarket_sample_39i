@@ -1,0 +1,89 @@
+@import "color";
+
+%mypage-link-hover {
+  background: $darkwhite;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.mypage-tab-notification {
+  display: none;
+  list-style: none;
+  &__list {
+    position: relative;
+    border-bottom: 1px solid $whiteSmoke;
+    &--view-all {
+      border: 0;
+      padding: 16px;
+    }
+  }
+  &__link {
+    display: block;
+    min-height: 80px;
+    padding: 16px;
+    color: $nightRider;
+    &:hover {
+      @extend %mypage-link-hover;
+    }
+    &--view-all {
+      font-size: 14px;
+      display: block;
+      height: 56px;
+      margin: 0 auto;
+      background: $whiteSmoke;
+      color: $nightRider;
+      line-height: 56px;
+      text-align: center;
+      &:hover {
+        @extend %mypage-link-hover;
+      }
+    }
+  }
+  &__figure {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48px;
+    height: 48px;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  &__body {
+    margin: 0 40px 0 68px;
+    font-size: 14px;
+  }
+  &__text {
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    max-height: 4.4em;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+  }
+  &__time {
+    display: inline-block;
+    color: $suvaGrey;
+  }
+  &__icon {
+    &--clock {
+      margin: 0 5px 0 0;
+      font-size: 16px;
+    }
+    &--arrow {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+    }
+  }
+}
