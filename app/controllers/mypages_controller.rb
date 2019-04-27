@@ -23,6 +23,6 @@ class MypagesController < ApplicationController
 
   private
   def add_mypage_breadcrumb
-      add_breadcrumb "マイページ", view_context.user_mypages_path(1)
+      add_breadcrumb "マイページ", view_context.user_mypages_path(user_id: params[:user_id])
   end
 end
