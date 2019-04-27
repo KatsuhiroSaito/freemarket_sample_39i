@@ -18,5 +18,7 @@ module FreemarketSample39i
       g.test_framework false
       g.template_engine :haml
     end
+
+    config.paths.add 'lib', eager_load: true
   end
 end

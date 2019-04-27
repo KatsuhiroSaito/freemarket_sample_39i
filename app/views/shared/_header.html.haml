@@ -312,7 +312,7 @@
                 %li.header-todos-box__list.header-todos-box__list--not-found 現在、やることリストはありません
           %li.header-nav__list
             .header-mypage
-              = link_to root_path, class: "header-mypage__link" do
+              = link_to user_mypages_path(1), class: "header-mypage__link" do
                 %figure.header-mypage__figure
                   %div.header-mypage__icon
                     = image_tag "sample-user-icon.jpg", size: "32"

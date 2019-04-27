@@ -1,0 +1,11 @@
+- if elements.present?
+  %nav.breadcrumbs
+    %ul.breadcrumbs__lists
+      - elements[0..-2].each do |element|
+        %li.breadcrumbs__list
+          - if element.path.present?
+            %a{:href => "#{element.path}"}= element.name
+          - else
+            = element.name
+          = icon('fas', 'chevron-right', class: 'breadcrumbs__divider')
+      %li.breadcrumbs__list.breadcrumbs__list--last= elements.last.name

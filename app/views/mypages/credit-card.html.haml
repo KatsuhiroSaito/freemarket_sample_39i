@@ -1,5 +1,7 @@
+= render 'shared/header'
+= render_breadcrumbs builder: ::CustomBreadcrumbsBuilder
+
 .mypage
-  = render 'shared/header'
   .mypage-main
     = render 'shared/mypage-sidebar'
     .card-content
