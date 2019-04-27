@@ -14,20 +14,20 @@
     padding: 16px 0;
     white-space: normal;
     font-size: 0;
-  }
-  &__list {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 1.2;
-    &:hover {
-      opacity: 0.7;
-      text-decoration: underline;
-    }
-    &--last {
-      font-weight: 600;
+    &>.breadcrumbs__list{
+      display: inline-block;
+      font-size: 14px;
+      line-height: 1.2;
       &:hover {
-        text-decoration: none;
-        opacity: 1.0;
+        opacity: 0.7;
+        text-decoration: underline;
+      }
+      &--last {
+        font-weight: 600;
+        &:hover {
+          text-decoration: none;
+          opacity: 1.0;
+        }
       }
     }
   }
