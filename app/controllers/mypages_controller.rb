@@ -8,7 +8,6 @@ class MypagesController < ApplicationController
 
   def edit
     add_breadcrumb 'プロフィール'
-    # binding.pry
   end
 
   def card
