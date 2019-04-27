@@ -1,5 +1,4 @@
 class MypagesController < ApplicationController
-  @user_mypage = Rails.root
   add_breadcrumb 'メルカリ', '/'
   before_action :add_mypage_breadcrumb
 
