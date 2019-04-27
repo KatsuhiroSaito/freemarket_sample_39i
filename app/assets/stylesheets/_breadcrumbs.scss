@@ -1,0 +1,39 @@
+.breadcrumbs {
+  position: relative;
+  border-top: 1px solid $whiteSmoke;
+  -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  background: $white;
+  & a {
+    color: $nightRider;
+  }
+  &__lists {
+    width: 1020px;
+    overflow: visible;
+    margin: 0 auto;
+    padding: 16px 0;
+    white-space: normal;
+    font-size: 0;
+  }
+  &__list {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.2;
+    &:hover {
+      opacity: 0.7;
+      text-decoration: underline;
+    }
+    &--last {
+      font-weight: 600;
+      &:hover {
+        text-decoration: none;
+        opacity: 1.0;
+      }
+    }
+  }
+  &__divider {
+    margin: 0 8px;
+    font-size: 9px;
+    color: $suvaGrey;
+  }
+}
