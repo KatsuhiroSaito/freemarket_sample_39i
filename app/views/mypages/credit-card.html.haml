@@ -16,7 +16,7 @@
               %li.card-settings-payment-list__item
                 %form.card-form{ action: "", method: 'POST' }
                   %figure.card-form-figure
-                    = image_tag "master-card.svg", alt: "master-card", class: '.card-form-figure__logo'
+                    = image_tag "master-card.svg", alt: "master-card", class: 'card-form-figure__logo'
                   %input{ type:'hidden', name:'__csrf_value',value:"" }
                   %input{ type:'hidden', name:'card_sequence_no',value:"" }
                   .card-settings-payment-num
