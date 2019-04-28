@@ -4,7 +4,7 @@ $(function(){
 
   $(link).each(function() {
     if ($(this).attr("href") == currentUrl) {
-      $(this).addClass("mypage-sidebar-list__item--active");
+      $(this).addClass("js-mypage-sidebar-current-page");
     }
   })
 });

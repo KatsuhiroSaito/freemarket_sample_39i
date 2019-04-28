@@ -13,14 +13,6 @@
         color: $nightRider;
       }
     }
-    &--active{
-      background: $whiteSmoke;
-      font-weight: 600;
-      font-size: 14px;
-      .mypage-sidebar-list__icon{
-        color: $nightRider;
-      }
-    }
   }
   &__icon{
     position: absolute;
@@ -34,5 +26,14 @@
     padding: 16px;
     color: $nightRider;
     display: block;
+  }
+}
+
+.js-mypage-sidebar-current-page{
+  background: $whiteSmoke;
+  font-weight: 600;
+  font-size: 14px;
+  .mypage-sidebar-list__icon{
+    color: $nightRider;
   }
 }
